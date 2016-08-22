@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+
     <link rel="shortcut icon" href="assets/ico/favicon.png">
 
     <title> forge - Make Yourself</title>
@@ -13,15 +14,7 @@
     <link rel="stylesheet" href="assets/css/icomoon.css">
     <link href="assets/css/animate-custom.css" rel="stylesheet">
 
-    <!-- jQuery and Bootstrap -->
-    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="forge/styles/main.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.js"></script>
-    <!-- Angular main and route CDN -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular-route.js"></script>
-    <!-- end of scripts -->
+
 
     <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
@@ -45,19 +38,26 @@
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="icon icon-shield" style="font-size:30px; color:#3498db;"></span>
+            <span>
+                <img src="assets/img/logoGrey.png" class="iconSmall"></span>
           </button>
-          <a class="navbar-brand hidden-xs hidden-sm" href="#home"><span class="icon icon-shield" style="font-size:18px; color:#3498db;"></span></a>
+
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
+              <li><div href="#home" class="smoothScroll">
+                  <img src="assets/img/logoGrey.png" class="iconNav">
+              </div></li>
             <li><a href="#home" class="smoothScroll">Home</a></li>
-			<li> <a href="#about" class="smoothScroll"> About</a></li>
-			<li> <a href="#services" class="smoothScroll"> Services</a></li>
-			<li> <a href="#team" class="smoothScroll"> Team</a></li>
-			<li> <a href="#portfolio" class="smoothScroll"> Portfolio</a></li>
-			<li> <a href="#blog" class="smoothScroll"> Blog</a></li>
+			<li> <a href="#dashboard" class="smoothScroll"> Dashboard</a></li>
+			<li> <a href="#habits" class="smoothScroll"> Habits</a></li>
+			<li> <a href="#lists" class="smoothScroll"> Lists</a></li>
 			<li> <a href="#contact" class="smoothScroll"> Contact</a></li>
+        <ul class="nav navbar-nav navbar-right">
+            <li> <a href="#signup" class="smoothScroll">
+                <span class="icon icon-signup"></span>
+            </a></li>
+        </ul>
         </div><!--/.nav-collapse -->
       </div>
     </div>
@@ -65,61 +65,43 @@
 
 
 
-		<!-- ==== HEADERWRAP ==== -->
+		<!-- =========================== HEADERWRAP ==================== -->
 	    <div id="headerwrap" id="home" name="home">
 			<header class="clearfix">
-	  		 		<h1><span class="icon icon-shield"></span></h1>
-	  		 		<p>A Bootstrap 3 One Page Theme.</p>
-	  		 		<p>Exclusive for BlackTie.co.</p>
+                <h1><span>
+                    <img src="assets/img/logo.png" class="iconLarge">
+                </span></h1>
+                <p style="font-size: 3.25em">You can't manage what you don't measure.</p>
+                <p style="font-size: 2em"> - Peter Drucker </p>
 	  		</header>
 	    </div><!-- /headerwrap -->
 
-		<!-- ==== GREYWRAP ==== -->
+		<!-- ============ GREYWRAP ================================================ -->
 		<div id="greywrap">
 			<div class="row">
 				<div class="col-lg-4 callout">
-					<span class="icon icon-stack"></span>
-					<h2>Bootstrap 3</h2>
-					<p>Shield Theme is powered by Bootstrap 3. The incredible Mobile First Framework is the best option to run your website. </p>
+					<span class="icon icon-target-2"></span>
+					<h2>Goal Tracking</h2>
+					<p>List your physical fitness goals, whether strength training or speed (such as running or swimming). You can also list your financial goals, whether saving for retirement or that brand new car! Set your goal then track your progess.</p>
 				</div><!-- col-lg-4 -->
 
 				<div class="col-lg-4 callout">
-					<span class="icon icon-eye"></span>
-					<h2>Retina Ready</h2>
-					<p>You can use this theme with your iPhone, iPad or MacBook Pro. This theme is retina ready and that is awesome. </p>
+					<span class="icon icon-calendar-2"></span>
+					<h2>Habit Tracking</h2>
+					<p>Creating (and sticking to) good habits is crucial to success. Create the habits you want to apply in your life, then track your adherence. If you can stick with it for 30 days, you're more likely to have it be engrained for life.</p>
 				</div><!-- col-lg-4 -->
 
 				<div class="col-lg-4 callout">
-					<span class="icon icon-heart"></span>
-					<h2>Crafted with Love</h2>
-					<p>We don't make sites, we craft themes with love & passion. That is our most valued secret. We only do thing that we love.   </p>
+					<span class="icon icon-checkbox-checked"></span>
+					<h2>List Management </h2>
+					<p>Create lists of the books or articles that you want to read. Completely customizable!  </p>
 				</div><!-- col-lg-4 -->
 			</div><!-- row -->
 		</div><!-- greywrap -->
 
-		<!-- ==== ABOUT ==== -->
-		<div class="container" id="about" name="about">
-			<div class="row white">
-			<br>
-				<h1 class="centered">A LITTLE ABOUT OUR AGENCY</h1>
-				<hr>
-
-				<div class="col-lg-6">
-					<p>We believe ideas come from everyone, everywhere. In fact, at BlackTie, everyone within our agency walls is a designer in their own right. And there are a few principles we believe—and we believe everyone should believe—about our design craft. These truths drive us, motivate us, and ultimately help us redefine the power of design. We’re big believers in doing right by our neighbors. After all, we grew up in the Twin Cities and we believe this place has much to offer. So we do what we can to support the community we love.</p>
-				</div><!-- col-lg-6 -->
-
-				<div class="col-lg-6">
-					<p>Over the past four years, we’ve provided more than $1 million in combined cash and pro bono support to Way to Grow, an early childhood education and nonprofit organization. Other community giving involvement throughout our agency history includes pro bono work for more than 13 organizations, direct giving, a scholarship program through the Minneapolis College of Art & Design, board memberships, and ongoing participation in the Keystone Club, which gives five percent of our company’s earnings back to the community each year.</p>
-				</div><!-- col-lg-6 -->
-			</div><!-- row -->
-		</div><!-- container -->
-
 		<!-- ==== SECTION DIVIDER1 -->
 		<section class="section-divider textdivider divider1">
 			<div class="container">
-				<h1>DESIGN EXPAND BOUNDARIES</h1>
-				<hr>
-				<p>To achieve real change, we have to expand boundaries. Because the Wild West of what-could-be is unexplored but rife with opportunity.</p>
 			</div><!-- container -->
 		</section><!-- section -->
 
@@ -129,20 +111,23 @@
 			<br>
 			<br>
 			<div class="row">
-				<h2 class="centered">ONE BRAND, ONE VOICE.</h2>
+				<h1 class="centered">MAKE YOURSELF</h1>
 				<hr>
 				<br>
 				<div class="col-lg-offset-2 col-lg-8">
-					<p>Employees and consumers. Two halves of a brand’s entirety, the whole of a brand’s audience. Sometimes these two halves have very different viewpoints, creating a weak spot in the brand story. Weakness tarnishes credibility. Brands that aren’t credible aren’t viable.
-					</p>
-					<p>We squash weakness by designing the whole brand story. It’s crafted around the truism held by employees and consumers to create an experience that connects from the inside out.</p>
-					<p>By being true to the brand we represent, we elevate the audiences’ relationship to it. Like becomes love becomes a passion. Passion becomes advocacy. And we see the brand blossom from within, creating a whole story the audience embraces. That’s when the brand can truly flex its muscles.</p>
+					<h5 class="centered">In order to achieve success, you need to set goals and measure your performance off of them.
+					</h5>
+					<h5 class="centered">Forge allows you to track personal metrics so that you can make yourself into the person you want to be.</h5>
+					<h3 class="centered">Sign up today to start achieving what you know you're capable of.</h3>
 				</div><!-- col-lg -->
 			</div><!-- row -->
-
+            <br>
+            <br>
 			<div class="row">
 				<h2 class="centered">MOBILE FIRST THINKING, ALWAYS.</h2>
 				<hr>
+
+                <p class="centered">Reactive website is mobile friendly for easy tracking on-the-go!</p>
 				<br>
 				<div class="col-lg-offset-2 col-lg-8">
 					<img class="img-responsive" src="assets/img/iphone.png" alt="">
@@ -178,56 +163,8 @@
 					<p>Mike combines an expert technical knowledge with a real eye for design. Working with clients from a wide range of industries, he fully understands client objectives when working on a project, large or small.</p>
 				</div><!-- col-lg-3 -->
 
-				<div class="col-lg-3 centered">
-					<img class="img img-circle" src="assets/img/team/team02.jpg" height="120px" width="120px" alt="">
-					<br>
-					<h4><b>Tim Davies</b></h4>
-					<a href="#" class="icon icon-twitter"></a>
-					<a href="#" class="icon icon-facebook"></a>
-					<a href="#" class="icon icon-flickr"></a>
-					<p>Tim is an experienced marcoms practitioner and manages projects from inception to delivery. He understands the synergy between great design and commercial effectiveness which shines through on every project.</p>
-				</div><!-- col-lg-3 -->
-
-				<div class="col-lg-3 centered">
-					<img class="img img-circle" src="assets/img/team/team03.jpg" height="120px" width="120px" alt="">
-					<br>
-					<h4><b>Michele Lampa</b></h4>
-					<a href="#" class="icon icon-twitter"></a>
-					<a href="#" class="icon icon-facebook"></a>
-					<a href="#" class="icon icon-flickr"></a>
-					<p>Be a creative director is a hard task, but Michele loves what she does. Her combination of knowledge and expertise is an important pillar in our agency.</p>
-				</div><!-- col-lg-3 -->
-
-				<div class="col-lg-3 centered">
-					<img class="img img-circle" src="assets/img/team/team04.jpg" height="120px" width="120px" alt="">
-					<br>
-					<h4><b>Jaye Smith</b></h4>
-					<a href="#" class="icon icon-twitter"></a>
-					<a href="#" class="icon icon-facebook"></a>
-					<a href="#" class="icon icon-flickr"></a>
-					<p>Jaye began making websites when animated logos and scrolling text were cool, but has since found a love for simplicity, creating websites that are a pleasure to browse. Monkey Island Fan.</p>
-				</div><!-- col-lg-3 -->
-
 			</div><!-- row -->
 		</div><!-- container -->
-
-		<!-- ==== GREYWRAP ==== -->
-		<div id="greywrap">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-8 centered">
-						<img class="img-responsive" src="assets/img/macbook.png" align="">
-					</div>
-					<div class="col-lg-4">
-						<h2>We Are Hiring!</h2>
-						<p>Do you want to be one of use? Sure you want, because we are an awesome team!. Here we work hard every day to craft pixel perfect sites.</p>
-						<p><a class="btn btn-success">Contact Us</a></p>
-					</div>
-				</div><!-- row -->
-			</div>
-			<br>
-			<br>
-		</div><!-- greywrap -->
 
 		<!-- ==== SECTION DIVIDER3 -->
 		<section class="section-divider textdivider divider3">
@@ -360,71 +297,15 @@
 		</div><!-- /row -->
 	</div><!-- /container -->
 
-		<!-- ==== SECTION DIVIDER4 ==== -->
-		<section class="section-divider textdivider divider4">
-			<div class="container">
-				<h1>DESIGN CREATES EMOTIONAL CONNECTION</h1>
-				<hr>
-				<p>There’s more to design than meets the eye. It’s when it meets the heart that design creates a meaningful, lasting connection with the audience.</p>
-			</div><!-- container -->
-		</section><!-- section -->
-
-		<!-- ==== BLOG ==== -->
-		<div class="container" id="blog" name="blog">
-		<br>
-			<div class="row">
-				<br>
-				<h1 class="centered">WE ARE STORYTELLERS</h1>
-				<hr>
-				<br>
-				<br>
-			</div><!-- /row -->
-
-			<div class="row">
-				<div class="col-lg-6 blog-bg">
-					<div class="col-lg-4 centered">
-					<br>
-						<p><img class="img img-circle" src="assets/img/team/team04.jpg" width="60px" height="60px"></p>
-						<h4>Jaye Smith</h4>
-						<h5>Published Aug 30.</h5>
-					</div>
-					<div class="col-lg-8 blog-content">
-						<h2>We Define Success</h2>
-						<p>Armed with insight, we embark on designing the right brand experience that engages the audience. It encompasses both the strategic direction and creative execution that solves a business problem and brings the brand to life.</p>
-						<p>In the create phase, the big idea is unleashed to the world through different media touchpoints. This is when we watch the audience fall in love all over again with our client’s brand.</p>
-						<p><a href="#" class="icon icon-link"> Read More</a></p>
-						<br>
-					</div>
-				</div><!-- /col -->
-
-				<div class="col-lg-6 blog-bg">
-					<div class="col-lg-4 centered">
-					<br>
-						<p><img class="img img-circle" src="assets/img/team/team03.jpg" width="60px" height="60px"></p>
-						<h4>Michele Lampa</h4>
-						<h5>Published Aug 28.</h5>
-					</div>
-					<div class="col-lg-8 blog-content">
-						<h2>A Beautiful Story</h2>
-						<p>Armed with insight, we embark on designing the right brand experience that engages the audience. It encompasses both the strategic direction and creative execution that solves a business problem and brings the brand to life.</p>
-						<p>In the create phase, the big idea is unleashed to the world through different media touchpoints. This is when we watch the audience fall in love all over again with our client’s brand.</p>
-						<p><a href="#" class="icon icon-link"> Read More</a></p>
-						<br>
-					</div>
-				</div><!-- /col -->
-			</div><!-- /row -->
-			<br>
-			<br>
-		</div><!-- /container -->
-
 
 		<!-- ==== SECTION DIVIDER6 ==== -->
 		<section class="section-divider textdivider divider6">
 			<div class="container">
-				<h1>CRAFTED IN NEW YORK, USA.</h1>
+				<h1 style="color: #2e4868">CRAFTED IN BOULDER, CO.</h1>
 				<hr>
-				<p>Some Address 987,</p>
-				<p>+34 9884 4893</p>
+				<p>3099 Fulton Cir</p>
+                <p>Boulder, CO 80301</p>
+				<p>(612) 555-5555</p>
 				<p><a class="icon icon-twitter" href="#"></a> | <a class="icon icon-facebook" href="#"></a></p>
 			</div><!-- container -->
 		</section><!-- section -->
@@ -484,7 +365,6 @@
 
 		<div id="footerwrap">
 			<div class="container">
-				<h4>Created by <a href="http://blacktie.co">BlackTie.co</a> - Copyright 2014</h4>
 			</div>
 		</div>
 
