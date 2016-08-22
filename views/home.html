@@ -1,0 +1,96 @@
+<div class="divBreak"></div>
+<div>
+  <p class="textCenter"> What type of goal would you like to add? </p>
+  <div class="divBreakSmall"></div>
+
+<!-- row1 -->
+<div class="flexBox">
+  <div ng-style="Goals.accent" class="box" ng-click="Goals.setAccent()">
+    <div ng-click="phys = !phys" ng-hide="fin" class="iconDivPhys">
+        <img src="assets/physical.png" class="icon2" />
+        <h2 class="physText"> PHYSICAL </h2>
+    </div>
+  </div>
+  <div ng-style="Goals.accent" class="box" ng-click="Goals.setAccent()">
+    <div ng-click="fin = !fin" ng-hide="phys" class="iconDivFin">
+        <img src="assets/money.png" class="icon2" />
+        <h2 class="finText"> FINANCIAL </h2>
+    </div>
+</div>
+</div>
+
+<div class="divBreakMd"></div>
+
+<!-- row2 -->
+<div class="flexBox">
+  <div ng-style="Goals.accent2" class="box" ng-click="Goals.setAccent2()">
+    <div ng-click="str = !str" ng-show="phys" class="iconDivPhys">
+        <img src="assets/strength.png" class="icon2" />
+        <h2 class="physText"> STRENGTH </h2>
+    </div>
+    </div>
+    <div ng-style="Goals.accent3" class="box" ng-click="Goals.setAccent3()">
+    <div ng-click="spd = !spd" ng-show="phys" class="iconDivPhys">
+        <img src="assets/speed.png" class="icon2" />
+        <h2 class="physText"> SPEED </h2>
+    </div>
+  </div>
+</div>
+
+<div class="divBreakSmall"></div>
+
+<!-- row3 =================================================================-->
+
+<!-- Strength Form ========================================================-->
+<div class="divForm">
+    <div ng-show="str" class="inputTitle">
+        <h4>Name of Goal</h4>
+<form ng-submit="Goals.addStrGoal(Goals.strName, Goals.strGoal, Goals.strCurrent, Goals.strByWhen)">
+          <input ng-model="Goals.strName" required="true" placeholder="Deadlift" type="text" class="input"></input>
+        <h4>Goal (lbs)</h4>
+          <input ng-model="Goals.strGoal" required="true" placeholder="400" type="number" class="input"></input>
+        <h4>Current (lbs)</h4>
+          <input ng-model="Goals.strCurrent" required="true" placeholder="300" type="number" class="input"></input>
+        <h4>By When</h4>
+          <input ng-model="Goals.strByWhen" required="true" placeholder="mm/dd/yyyy" class="input"></input>
+        <br>
+          <input type="submit" class="btn btn-default physBtn"></input>
+        </form>
+        <br>
+    </div>
+
+
+<!-- Speed Form ============================================================-->
+    <div ng-show="spd" class="inputTitle">
+        <h4>Name of Goal</h4>
+        <form ng-submit="Goals.addSpdGoal(Goals.spdName, Goals.spdGoal, Goals.spdCurrent, Goals.spdByWhen)">
+          <input ng-model="Goals.spdName" required="true" placeholder="Run 5k" type="text" class="input"></input>
+        <h4>Goal (minutes)</h4>
+          <input ng-model="Goals.spdGoal" required="true" placeholder="25" type="number" class="input"></input>
+        <h4>Current (minutes)</h4>
+          <input ng-model="Goals.spdCurrent" required="true" placeholder="42" type="number" class="input"></input>
+        <h4>By When</h4>
+          <input ng-model="Goals.spdByWhen" required="true" placeholder="mm/dd/yyyy" class="input"></input>
+        <br>
+        <input type="submit" class="btn btn-default physBtn"></input>
+      </form>
+    <br>
+  </div>
+
+<!-- Financial Form ========================================================-->
+    <div ng-click="" ng-show="fin" class="inputTitle">
+        <h4>Name of Goal</h4>
+      <form ng-submit="Goals.addFinGoal(Goals.finName, Goals.finGoal, Goals.finCurrent, Goals.finByWhen)">
+        <input ng-model="Goals.finName" required="true" placeholder="Rainy Day Fund" type="text" class="input"></input>
+        <h4>Goal ($)</h4>
+        <input ng-model="Goals.finGoal" required="true" placeholder="10,000" type="number" class="input"></input>
+        <h4>Current ($)</h4>
+        <input ng-model="Goals.finCurrent" required="true" placeholder="5,000" type="number" class="input"></input>
+        <h4>By When</h4>
+        <input ng-model="Goals.finByWhen" required="true" placeholder="mm/dd/yyyy" class="input"></input>
+        <br>
+      <input type="submit" class="btn btn-default finBtn"></input>
+      </form>
+      <br>
+    </div>
+</div> 

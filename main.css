@@ -1,0 +1,241 @@
+.background {
+  background-image: url(assets/workHarder4.jpeg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  padding-top: 10px;
+}
+
+.container {
+  margin-left: 20px;
+  margin-top: 20px;
+  background-color: #1f0971; dark blue;
+
+}
+
+.textCenter {
+  font-size: 5vw;
+  font-weight: 100;
+  color: grey;
+  text-align: center;
+}
+
+.icon {
+  display: flex;
+  width: 70px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 10px;
+}
+
+.icon2 {
+  margin-top: 12%;
+  margin-left: 13%;
+  width: 150px;
+  height: 150px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.flexBox {
+  display: flex;
+  justify-content: space-around;
+}
+
+.box {
+  border-radius: 20px;
+}
+
+.box:hover {
+  border-radius: 20px;
+  position: relative;
+  transition-property: background-color, color;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-out;
+  background-color: #1f0971;
+  padding-bottom: 7px;
+
+}
+
+.iconDivPhys {
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 20px;
+  background-color: #ff6d00;
+}
+
+.physText {
+  text-align: center;
+  color: #ff6d00; orange;
+  font-weight: bolder;
+}
+
+.finText {
+  text-align: center;
+  color: #8ae429; green;
+  font-weight: bolder;
+}
+
+.iconDivFin {
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 20px;
+  border-style: hidden;
+  background-color: #8ae429; green
+}
+
+.divBreak {
+  height: 400px;
+  width: 100%;
+}
+
+.divBreakSmall {
+  height: 50px;
+}
+
+.divBreakMd {
+  height: 100px;
+}
+
+.divBreakTiny {
+  height: 10px;
+}
+
+.navBar {
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+.title1 {
+  vertical-align: middle;
+  font-size: 45px;
+  color: #ff6d00; orange;
+  display: inline-block;
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+.submitBtn {
+  margin-left: 20px;
+}
+
+.physBtn {
+  background-color: #ff6d00; orange;
+  color: white;
+}
+
+.finBtn {
+  background-color: #8ae429; green;
+  color: #1f0971; dark blue;
+}
+
+.input {
+  font-size: 20px;
+  margin-bottom: 25px;
+  color: black;
+}
+
+.inputTitle {
+  margin-left: 20px;
+  display: inline-block;
+  color: white;
+}
+
+.divForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1f0971; dark blue;
+  padding-top: 20px;
+  padding-bottom: 150px;
+}
+
+.glyphicon glyphicon-th {
+  display: inline-block;
+}
+
+.physChartText {
+  color: white;
+  margin: 20px;
+}
+
+.finChartText {
+  color: black;
+  margin: 20px;
+}
+
+.DivStr {
+  display: inline-block;
+  margin-left: 10px;
+  background-color: #ff6d00; orange;
+  color: white;
+  padding: 50px;
+
+}
+
+.chartDivStr {
+  display: inline-block;
+  margin-left: 10px;
+  background-color: #ff6d00; orange;
+  padding: 50px;
+  width: 100%;
+}
+
+.chartDivFin {
+  display: inline-block;
+  margin-left: 10px;
+  background-color: #8ae429; green;
+  padding: 50px;
+  width: 100%;
+}
+
+/*// =====================================================================================
+// Horizontal Bar Chart
+// =====================================================================================*/
+.axis text {
+  font: 16pt sans-serif;
+  font-family: 'Poiret One', cursive;
+}
+
+.axis path, .axis line {
+  fill: white;
+  stroke: black;
+  shape-rendering: crispEdges;
+}
+.y.axis path, .y.axis line {
+  stroke: none;
+}
+
+.arc text {
+  font: 10px sans-serif;
+  text-anchor: middle;
+}
+
+.arc path {
+  stroke: #fff;
+}
+
+.chart {
+    position: relative;
+}
+.chart .layer {
+    font-size: 0.5em;
+    font-family: sans-serif;
+    color: white;
+    text-align: right;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+.chart .layer.one {
+    background-color: steelblue;
+}
+.chart .layer.two {
+    background-color: indianred;
+    position: absolute;
+}

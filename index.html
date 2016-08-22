@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html ng-app="App">
+
+<head>
+    <meta charset="utf-8">
+    <!-- jQuery and Bootstrap -->
+    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="main.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.js"></script>
+    <!-- Angular main and route CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular-route.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.js"></script>
+    <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="scripts/app.js"></script>
+    <script type="text/javascript" src="scripts/goalsCtrl.js"></script>
+    <script type="text/javascript" src="scripts/chartCtrl.js"></script>
+    <!-- Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
+
+
+    <!-- end of scripts -->
+
+    <title>forge: Make Yourself</title>
+</head>
+
+<body ng-controller="Goals as Goals">
+
+        <div class="background">
+        <img src="assets/brand.png" class="icon">
+        <span class="title1">forge</span>
+
+        <!-- nav bar ==============================================-->
+        <ul class="nav nav-tabs navbar-right navBar">
+            <li role="presentation"><a href="/#/home">Home</a></li>
+            <li role="presentation"><a href="/#/dashboard">Dashboard</a></li>
+            <li role="presentation"><a href="/#/habits">Habits</a></li>
+            <li role="presentation"><a href="/#/lists">Lists</a></li>
+        </ul>
+
+    <ng-view></ng-view>
+</body>
+</html>
