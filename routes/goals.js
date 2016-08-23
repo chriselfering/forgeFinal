@@ -23,14 +23,6 @@ module.exports = {
                 res.json(goals);
             }); // exec gives us a place to pass in the callback function find used to take.  Like a 'then' method for mongoose
 
-        // Populate
-        // {headquarters : 8u58487909234u}
-        // {headquarters : {
-        //     _id : 8u58487909234u,
-        //     name :
-        //     moatType
-        // }}
-    },
     // /api/goals
     // /api/goals/:id
     // /api/goals/53982034abdsjc893
@@ -45,7 +37,7 @@ module.exports = {
             var newGoal = new Goal(req.body);
 
             // Or, if req.body doesn't match your schema - manually construct the object you pass to new Goal
-            // var newHero = new Goal({
+            // var newGoal = new Goal({
             //     name : req.body.firstName + ' ' + req.body.lastName,
             //     powers : req.body.powers.split(', '),
             //     weaknesses : someOtherObj.stuff,
@@ -60,11 +52,9 @@ module.exports = {
                 res.json(goal);
             });
         }
-
     },
 
     remove : (req, res) =>{
         // Delete
     }
-
 }

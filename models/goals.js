@@ -5,8 +5,8 @@ var goalSchema = mongoose.Schema({
     name:       {type : String},
     current:    {type : Number},
     byWhen:     {type : Date},
-    stats: [
-                {current    : {type: Number},
+    stats: [{
+                current    : {type: Number},
                 date        : {type: Date}
             }]
 

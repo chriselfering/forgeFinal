@@ -21,7 +21,7 @@ app.use(express.static(path.join(__dirname,'public')));
 
 // make sure you have mongod running!
 // connection string: 'mongodb://localhost/<db-name>'
-mongoose.connect('mongodb://localhost/heroes-of-ajax', (error) => {
+mongoose.connect('mongodb://localhost/forge', (error) => {
     if(error) {
         console.error('Oh no, could not start mongoose!', error);
         process.exit(1); // exits a node application, anything other than 0 is considered an error
@@ -39,6 +39,6 @@ app.listen(port, (error)=>{
         console.error('Oh no, the server could not start!', error);
         process.exit(1); // exits a node application, anything other than 0 is considered an error
     } else {
-        console.log('Our heroesy server is making hero noises.'.yellow);
+        console.log('Our forge server is making forge noises.'.yellow);
     }
 });
