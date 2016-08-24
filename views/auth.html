@@ -5,12 +5,12 @@
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
         <link rel="stylesheet" href="/css/auth.css">
 
-        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
         <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
         <script src="/js/auth.js"></script>
     </head>
-    <body ng-controller="app.auth.controller as auth">
+    <body ng-controller="app.auth.controller as auth" class="containter">
         <section id="tabs">
             <!-- Nav tabs -->
             <ul class="nav nav-tabs" role="tablist">
@@ -30,7 +30,7 @@
                             <label class="sr-only" for="email">Email</label>
                             <div class="input-group">
                                 <div class="input-group-addon">@</div>
-                                <input required placeholder="Email" class="form-control" type="email" ng-model="auth.payload.email"/>
+                                <input required placeholder="Email" class="form-control" type="text" ng-model="auth.payload.email"/>
                             </div>
                         </fieldset>
                         <fieldset class="form-group">

@@ -1,20 +1,29 @@
-
-{
-  "name": "forge",
+``{
+  "name": "login",
   "version": "1.0.0",
-  "description": "get that forge app",
+  "description": "Login example",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "dev": "nodemon"
   },
   "author": "celf",
   "license": "ISC",
   "dependencies": {
+    "bcryptjs": "^2.3.0",
     "body-parser": "^1.15.2",
+    "client-sessions": "^0.7.0",
     "colors": "^1.1.2",
+    "ejs": "^2.4.2",
     "express": "^4.14.0",
-    "mongoose": "^4.5.8",
+    "mongoose": "^4.5.6",
     "morgan": "^1.7.0"
+  },
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "node": true,
+      "es6": true
+    }
   }
 }
