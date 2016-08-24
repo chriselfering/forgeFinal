@@ -1,11 +1,7 @@
-// Goals Controller
+// User Controller
 
 // Require the model so we can access the collection
-var Goal = require('../models/goals');
-// Goal => db.goals
-// Goal.find()
-// db.goals.find()
-
+var User = require('../models/user');
 
 module.exports = {
     get : (req, res) => {
@@ -17,17 +13,19 @@ module.exports = {
         // });
 
         // With Populate
-        Goal.find({})
-            .populate('headquarters') // Property name of a goal doc we want to populate
-            .exec(function(err, goals){
-                res.json(goals);
+        User.find({})
+            .exec(function(err, user){
+                res.json(user);
             }); // exec gives us a place to pass in the callback function find used to take.  Like a 'then' method for mongoose
-
+            Goal.find({})
+                .exec(function(err, goals){
+                    res.json(goals);
+                });
     // /api/goals
     // /api/goals/:id
     // /api/goals/53982034abdsjc893
     // /api/v2/evolution-chain/215
-    upsert : (req, res) =>{
+    upsert : (req, res) => {
         // Create / Update
         if(req.params.id){
             // Update existing document
