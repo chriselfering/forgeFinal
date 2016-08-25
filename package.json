@@ -1,4 +1,4 @@
-``{
+{
   "name": "login",
   "version": "1.0.0",
   "description": "Login example",
@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon"
   },
-  "author": "celf",
+  "author": "jiminikiz",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.3.0",
