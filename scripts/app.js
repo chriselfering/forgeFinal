@@ -6,10 +6,10 @@ angular.module('App')
     .factory('FinFactory', FinFactory)
     .config(function($routeProvider) {
         $routeProvider.when('/', {
-            templateUrl: '/views/landing.html'
+            templateUrl: '/views/home.html'
         });
 
-        $routeProvider.when('/landing', {
+        $routeProvider.when('/home', {
             templateUrl: '/views/landing.html'
         });
 
@@ -22,15 +22,14 @@ angular.module('App')
         $routeProvider.when('/lists', {
             templateUrl: '/views/lists.html'
         });
-
         $routeProvider.when('/login', {
             templateUrl: '/views/auth.html'
-            controller: 'app.auth.controller as auth'
+            controller: 'AuthController as auth'
         });
 
 
         //default route
-        $routeProvider.otherwise({ redirectTo: '/landing' });
+        $routeProvider.otherwise({ redirectTo: '/home' });
     });
 
 

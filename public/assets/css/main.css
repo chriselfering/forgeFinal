@@ -404,7 +404,8 @@ a:after {
 
 .divider1 {
 	background-image: url('../img/bg/workHarder.jpeg');
-    height: 50%;
+    padding-top: 200px;
+    padding-bottom: 200px;
 }
 
 .divider2 {

@@ -13,16 +13,6 @@ angular.module('App')
             templateUrl: '/views/home.html'
         });
 
-        $routeProvider.when('/goals', {
-            templateUrl: '/views/goals.html',
-        });
-        $routeProvider.when('/habits', {
-            templateUrl: '/views/habits.html'
-        });
-        $routeProvider.when('/lists', {
-            templateUrl: '/views/lists.html'
-        });
-
         //default route
         $routeProvider.otherwise({ redirectTo: '/home' });
     });
