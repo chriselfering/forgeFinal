@@ -5,7 +5,8 @@ var Auth = require('./auth');
 module.exports = function(app) {
     // SITE ROOT
     app.get('/', (req, res) => { // replace this route with a landing or home page
-        req.session.user? res.redirect('/dashboard') : res.redirect('/login');
+        // req.session.user? res.redirect('/dashboard') : res.redirect('/login');
+        res.render('index.html');
     });
     app.get('/login', Auth.render); // route for the login page
     app.get('/logout', Auth.logout); // route for logging out

@@ -20,7 +20,7 @@ function userCtrl (apiFactory){
                 uCtrl.userList = response.data;
             });
     }
-    uCtrl.retrieveUser();
+    // uCtrl.retrieveUser();
     // console.log(apiFactory)
 
     uCtrl.makeAUser = function () {
