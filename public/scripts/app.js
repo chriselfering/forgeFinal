@@ -14,7 +14,7 @@ angular.module('App')
         });
 
         //default route
-        $routeProvider.otherwise({ redirectTo: '/home' });
+        $routeProvider.otherwise({ redirectTo: '/' });
     });
 
 

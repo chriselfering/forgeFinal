@@ -1,9 +1,10 @@
-angular.module('app.dashboard', [])
-    .controller('DashboardController', Dashboard);
+angular.module('app.dashboard', ['ngRoute'])
+    .controller('DashboardController', Dashboard)
     .config(function($routeProvider) {
-        function Dashboard() {
-            console.info('Dashboard.initialized')
-        }
+
+        $routeProvider.when('/', {
+            templateUrl: '/views/goals.html',
+        });
         $routeProvider.when('/goals', {
             templateUrl: '/views/goals.html',
         });
@@ -16,4 +17,10 @@ angular.module('app.dashboard', [])
         $routeProvider.when('/charts', {
             templateUrl: '/views/charts.html'
         });
+        $routeProvider.otherwise({ redirectTo: '/' });
+
     });
+
+
+function Dashboard() {
+    console.info('Dashboard.initialized')}

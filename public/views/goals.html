@@ -1,15 +1,15 @@
-<div class="divBreak"></div>
+<div class="divBreakMd"></div>
 <p class="textCenter"> What type of goal would you like to add? </p>
 <div class="divBreakSmall"></div>
 
 <!-- row1 -->
 <div class="flexBox">
     <div ng-click="" ng-hide="" class="iconDivPhys">
-        <img src="assets/physical.png" class="icon2" />
+        <img src="assets/img/physical.png" class="icon2" />
         <h2 class="physText"> PHYSICAL </h2>
     </div>
     <div ng-click="" ng-hide="" class="iconDivFin">
-        <img src="assets/money.png" class="icon2" />
+        <img src="assets/img/money.png" class="icon2" />
         <h2 class="finText"> FINANCIAL </h2>
     </div>
 </div>
@@ -19,11 +19,12 @@
 <!-- row2 -->
 <div class="flexBox">
     <div ng-click="" ng-hide="" class="iconDivPhys">
-        <img src="assets/strength.png" class="icon2" />
+        <img src="assets/img/strength.png" class="icon2" />
         <h2 class="physText"> STRENGTH </h2>
     </div>
     <div ng-click="" ng-hide="" class="iconDivPhys">
-        <img src="assets/speed.png" class="icon2" />
+        <img src="assets/img/speed.png" class="icon2" />
+        <a data-toggle="modal" href="#myModal" class="btn btn-primary btn-lg">Take a Look</a>
         <h2 class="physText"> SPEED </h2>
     </div>
 </div>
@@ -31,31 +32,31 @@
 <div class="divBreakSmall"></div>
 
 <!-- row3 -->
-<div class="divForm">
-    <div ng-click="" ng-hide="" class="inputTitle">
-        <h4>Name of Goal</h4>
-        <input required placeholder="Deadlift" type="text" class="input"></input>
-        <h4>Goal (lbs)</h4>
-        <input required placeholder="400" type="number" class="input"></input>
-        <h4>Current (lbs)</h4>
-        <input required placeholder="185" type="number" class="input"></input>
-        <h4>By When</h4>
-        <input required placeholder="mm/dd/yyyy" class="input"></input>
-        <br>
-        <div class="btn-group">
-            <button type="button" class="btn btn-default dropdown-toggle physBtn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Add Goal <span class="caret"></span>
-            </button>
-            <ul class="dropdown-menu">
-                <li><a href="#">add another Strength Goal</a></li>
-                <li><a href="#">add another Physical Goal</a></li>
-                <li><a href="#">add a Financial Goal</a></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="#">No more goals!</a></li>
-            </ul>
-        </div>
-        <br>
-    </div>
+<div class="modal fade" id="speedModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header" style="background-color: #ff6d00">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">Sign Up</h4>
+      </div>
+      <div class="modal-body">
+<!-- ======================Sign Up Form start============================================== -->
+         <form ng-submit="uCtrl.makeAUser()">
+             <input class="form-control" ng-model="uCtrl.newUser.name" placeholder="Run 100m">
+             <br>
+             <input class="form-control" type="number" ng-model="uCtrl.newUser.password" placeholder="40">
+             <br>
+             <input class="form-control" type="date" ng-model="uCtrl.newUser.email" placeholder="12/31/2016">
+             <br>
+             <input type="submit">
+         </form>
+<!-- ======================Sign Up Form end================================================= -->
+      </div>
+      <div class="modal-footer"></div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<!-- ===========================Sign Up Modal end=================================== -->
 
     <div ng-click="" ng-hide="" class="inputTitle">
         <h4>Name of Goal</h4>

@@ -18,7 +18,7 @@
     <script type="text/javascript" src="scripts/chartCtrl.js"></script>
 
     <link rel="shortcut icon" href="assets/ico/favicon.png">
-    <script src="/js/dashboard.js"></script>
+    <script src="scripts/dashboard.js"></script>
     <title> forge - Make Yourself</title>
 
     <!-- Bootstrap core CSS -->
@@ -57,8 +57,9 @@
                         <li><a href="#goals" class="smoothScroll">Goals</a></li>
                         <li> <a href="#habits" class="smoothScroll">Habits</a></li>
                         <li> <a href="#lists" class="smoothScroll">Lists</a></li>
-                        <li>
                         <li> <a href="#charts" class="smoothScroll">Charts</a></li>
+                        <li><a href="/" class="icon icon-home">
+                        </a></li>
                         <li>
                             <a href="/logout">Log Out
                         <span class="icon icon-signup"></span>
@@ -72,10 +73,7 @@
     </div>
     <!-- =========================== Nav Bar End ==================== -->
 
-    <div id="greywrap" style="width: 100%">
-        <h1>Welcome to your dashboard!</h1>
-        <p>One day this page will be filled with imagination.</p>
-    </div>
+<ng-view></ng-view>
 
     <div id="footerwrap">
         <div class="container">

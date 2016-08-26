@@ -708,13 +708,13 @@ a:after {
 .physText {
   text-align: center;
   color: #ff6d00; orange;
-  font-weight: bolder;
+  font-weight: bold;
 }
 
 .finText {
   text-align: center;
   color: #8ae429; green;
-  font-weight: bolder;
+  font-weight: bold;
 }
 
 .iconDivFin {
