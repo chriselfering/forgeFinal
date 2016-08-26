@@ -24,51 +24,33 @@
                     </div>
                     <figcaption>
                         <h5>Strength Goal</h5>
-                        <a data-toggle="modal" href="#signupModal" class="btn btn-primary btn-lg">Create</a>
+                        <a data-toggle="modal" href="#strModal" class="btn btn-primary btn-lg">Create</a>
                     </figcaption><!-- /figcaption -->
                 </figure><!-- /figure -->
             </div><!-- /grid-mask -->
         </div><!-- /col -->
 
 
-                 <!-- MODAL SHOW THE PORTFOLIO IMAGE. In this demo, all links point to this modal. You should create
-                      a modal for each of your projects. -->
 
-                  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                          <h4 class="modal-title">Project Title</h4>
-                        </div>
-                        <div class="modal-body">
-                          <p><img class="img-responsive" src="assets/img/portfolio/folio01.jpg" alt=""></p>
-                          <p>This project was crafted for Some Name corp. Detail here a little about your job requirements and the tools used. Tell about the challenges faced and what you and your team did to solve it.</p>
-                          <p><b><a href="#">Visit Site</a></b></p>
-                        </div>
-                        <div class="modal-footer">
-                          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        </div>
-                      </div><!-- /.modal-content -->
-                    </div><!-- /.modal-dialog -->
-                  </div><!-- /.modal -->
 
-<!-- ===========================Sign Up Modal start=================================== -->
-                  <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<!-- ===========================Strength Goal Modal start=================================== -->
+                  <div class="modal fade" id="strModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                     <div class="modal-dialog">
                       <div class="modal-content">
                         <div class="modal-header" style="background-color: #ff6d00">
                           <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                          <h4 class="modal-title">Sign Up</h4>
+                          <h4 class="modal-title">Create Your Strength Goal</h4>
                         </div>
                         <div class="modal-body">
 <!-- ======================Sign Up Form start============================================== -->
                            <form ng-submit="uCtrl.makeAUser()">
-                               <input class="form-control" ng-model="uCtrl.newUser.name" placeholder="Name">
+                               <span>Name of Goal</span><input class="form-control" ng-model="uCtrl.newUser.name" placeholder="Deadlift">
                                <br>
-                               <input class="form-control" type="password" ng-model="uCtrl.newUser.password" placeholder="Password">
+                               <span>Start Point (lbs)</span><input class="form-control" type="number" ng-model="uCtrl.newUser.password" placeholder="300">
                                <br>
-                               <input class="form-control" type="email" ng-model="uCtrl.newUser.email" placeholder="Email Address">
+                               <span>Goal Amount (lbs)</span><input class="form-control"  ng-model="uCtrl.newUser.email" type="number" placeholder="450">
+                               <br>
+                               <span>By When</span><input class="form-control"  ng-model="uCtrl.newUser.email" type="date" placeholder="12/31/2016">
                                <br>
                                <input type="submit">
                            </form>
@@ -80,6 +62,63 @@
                   </div><!-- /.modal -->
 <!-- ===========================Sign Up Modal end=================================== -->
 
+<!-- ===========================Speed Goal Modal start=================================== -->
+                  <div class="modal fade" id="spdModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header" style="background-color: #ff6d00">
+                          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                          <h4 class="modal-title">Create Your Speed Goal</h4>
+                        </div>
+                        <div class="modal-body">
+<!-- ======================Sign Up Form start============================================== -->
+                           <form ng-submit="uCtrl.makeAUser()">
+                               <span>Name of Goal</span><input class="form-control" ng-model="uCtrl.newUser.name" placeholder="Run 100m">
+                               <br>
+                               <span>Start Point (min)</span><input class="form-control" type="number" ng-model="uCtrl.newUser.password" placeholder="10">
+                               <br>
+                               <span>Goal Amount (min)</span><input class="form-control"  ng-model="uCtrl.newUser.email" type="number" placeholder="7.5">
+                               <br>
+                               <span>By When</span><input class="form-control"  ng-model="uCtrl.newUser.email" type="date" placeholder="12/31/2016">
+                               <br>
+                               <input type="submit">
+                           </form>
+  <!-- ======================Sign Up Form end================================================= -->
+                        </div>
+                        <div class="modal-footer"></div>
+                      </div><!-- /.modal-content -->
+                    </div><!-- /.modal-dialog -->
+                  </div><!-- /.modal -->
+<!-- ===========================Sign Up Modal end=================================== -->
+
+<!-- ===========================Financial Goal Modal start=================================== -->
+                  <div class="modal fade" id="finModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header" style="background-color: #ff6d00">
+                          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                          <h4 class="modal-title">Create Your Financial Goal</h4>
+                        </div>
+                        <div class="modal-body">
+<!-- ======================Sign Up Form start============================================== -->
+                           <form ng-submit="uCtrl.makeAUser()">
+                               <span>Name of Goal</span><input class="form-control" ng-model="uCtrl.newUser.name" placeholder="Save for Retirement">
+                               <br>
+                               <span>Start Point ($)</span><input class="form-control" type="number" ng-model="uCtrl.newUser.password" placeholder="500">
+                               <br>
+                               <span>Goal Amount ($)</span><input class="form-control"  ng-model="uCtrl.newUser.email" type="number" placeholder="10,000">
+                               <br>
+                               <span>By When</span><input class="form-control"  ng-model="uCtrl.newUser.email" type="date" placeholder="12/31/2016">
+                               <br>
+                               <input type="submit">
+                           </form>
+  <!-- ======================Sign Up Form end================================================= -->
+                        </div>
+                        <div class="modal-footer"></div>
+                      </div><!-- /.modal-content -->
+                    </div><!-- /.modal-dialog -->
+                  </div><!-- /.modal -->
+<!-- ===========================Sign Up Modal end=================================== -->
 
         <!-- Speed Goal -->
         <div class="col-md-4">
@@ -90,7 +129,7 @@
                     </div>
                     <figcaption>
                         <h5>Speed Goal</h5>
-                        <a data-toggle="modal" href="#myModal" class="btn btn-primary btn-lg">Create</a>
+                        <a data-toggle="modal" href="#spdModal" class="btn btn-primary btn-lg">Create</a>
                     </figcaption><!-- /figcaption -->
                 </figure><!-- /figure -->
             </div><!-- /grid-mask -->
@@ -105,7 +144,7 @@
                     </div>
                     <figcaption>
                         <h5>Financial Goal</h5>
-                        <a data-toggle="modal" href="#myModal" class="btn btn-primary btn-lg">Create</a>
+                        <a data-toggle="modal" href="#finModal" class="btn btn-primary btn-lg">Create</a>
                     </figcaption><!-- /figcaption -->
                 </figure><!-- /figure -->
             </div><!-- /grid-mask -->
