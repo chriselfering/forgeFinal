@@ -1,110 +1,122 @@
-<div class="divBreakMd"></div>
-<p class="textCenter"> What type of goal would you like to add? </p>
-<div class="divBreakSmall"></div>
 
-<!-- row1 -->
-<div class="flexBox">
-    <div ng-click="" ng-hide="" class="iconDivPhys">
-        <img src="assets/img/physical.png" class="icon2" />
-        <h2 class="physText"> PHYSICAL </h2>
-    </div>
-    <div ng-click="" ng-hide="" class="iconDivFin">
-        <img src="assets/img/money.png" class="icon2" />
-        <h2 class="finText"> FINANCIAL </h2>
-    </div>
-</div>
+<!-- ==== PORTFOLIO ==== -->
+<div class="container" id="portfolio" name="portfolio">
+<br>
+    <div class="row">
+        <br>
+        <br>
+        <br>
+        <h1 class="centered">What type of goal would you like to create?</h1>
+        <br>
+        <hr>
+        <br>
+        <br>
+    </div><!-- /row -->
+    <div class="container">
+    <div class="row">
 
-<div class="divBreakMd"></div>
+        <!-- Strength Goal -->
+        <div class="col-md-4 ">
+            <div class="grid mask">
+                <figure style="text-align: center">
+                    <div class="iconDivPhys">
+                        <img class="img-responsive" src="assets/img/strength.png" alt="">
+                    </div>
+                    <figcaption>
+                        <h5>Strength Goal</h5>
+                        <a data-toggle="modal" href="#signupModal" class="btn btn-primary btn-lg">Create</a>
+                    </figcaption><!-- /figcaption -->
+                </figure><!-- /figure -->
+            </div><!-- /grid-mask -->
+        </div><!-- /col -->
 
-<!-- row2 -->
-<div class="flexBox">
-    <div ng-click="" ng-hide="" class="iconDivPhys">
-        <img src="assets/img/strength.png" class="icon2" />
-        <h2 class="physText"> STRENGTH </h2>
-    </div>
-    <div ng-click="" ng-hide="" class="iconDivPhys">
-        <img src="assets/img/speed.png" class="icon2" />
-        <a data-toggle="modal" href="#myModal" class="btn btn-primary btn-lg">Take a Look</a>
-        <h2 class="physText"> SPEED </h2>
-    </div>
-</div>
 
-<div class="divBreakSmall"></div>
+                 <!-- MODAL SHOW THE PORTFOLIO IMAGE. In this demo, all links point to this modal. You should create
+                      a modal for each of your projects. -->
 
-<!-- row3 -->
-<div class="modal fade" id="speedModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header" style="background-color: #ff6d00">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title">Sign Up</h4>
-      </div>
-      <div class="modal-body">
+                  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                          <h4 class="modal-title">Project Title</h4>
+                        </div>
+                        <div class="modal-body">
+                          <p><img class="img-responsive" src="assets/img/portfolio/folio01.jpg" alt=""></p>
+                          <p>This project was crafted for Some Name corp. Detail here a little about your job requirements and the tools used. Tell about the challenges faced and what you and your team did to solve it.</p>
+                          <p><b><a href="#">Visit Site</a></b></p>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                      </div><!-- /.modal-content -->
+                    </div><!-- /.modal-dialog -->
+                  </div><!-- /.modal -->
+
+<!-- ===========================Sign Up Modal start=================================== -->
+                  <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header" style="background-color: #ff6d00">
+                          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                          <h4 class="modal-title">Sign Up</h4>
+                        </div>
+                        <div class="modal-body">
 <!-- ======================Sign Up Form start============================================== -->
-         <form ng-submit="uCtrl.makeAUser()">
-             <input class="form-control" ng-model="uCtrl.newUser.name" placeholder="Run 100m">
-             <br>
-             <input class="form-control" type="number" ng-model="uCtrl.newUser.password" placeholder="40">
-             <br>
-             <input class="form-control" type="date" ng-model="uCtrl.newUser.email" placeholder="12/31/2016">
-             <br>
-             <input type="submit">
-         </form>
-<!-- ======================Sign Up Form end================================================= -->
-      </div>
-      <div class="modal-footer"></div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
+                           <form ng-submit="uCtrl.makeAUser()">
+                               <input class="form-control" ng-model="uCtrl.newUser.name" placeholder="Name">
+                               <br>
+                               <input class="form-control" type="password" ng-model="uCtrl.newUser.password" placeholder="Password">
+                               <br>
+                               <input class="form-control" type="email" ng-model="uCtrl.newUser.email" placeholder="Email Address">
+                               <br>
+                               <input type="submit">
+                           </form>
+  <!-- ======================Sign Up Form end================================================= -->
+                        </div>
+                        <div class="modal-footer"></div>
+                      </div><!-- /.modal-content -->
+                    </div><!-- /.modal-dialog -->
+                  </div><!-- /.modal -->
 <!-- ===========================Sign Up Modal end=================================== -->
 
-    <div ng-click="" ng-hide="" class="inputTitle">
-        <h4>Name of Goal</h4>
-        <input required placeholder="Run 5k" type="text" class="input"></input>
-        <h4>Goal (minutes)</h4>
-        <input required placeholder="25" type="number" class="input"></input>
-        <h4>Current (minutes)</h4>
-        <input required placeholder="42" type="number" class="input"></input>
-        <h4>By When</h4>
-        <input required placeholder="mm/dd/yyyy" class="input"></input>
-        <br>
-        <div class="btn-group">
-            <button type="button" class="btn btn-default dropdown-toggle physBtn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Add Goal <span class="caret"></span>
-            </button>
-            <ul class="dropdown-menu">
-                <li><a href="#">add another Speed Goal</a></li>
-                <li><a href="#">add another Physical Goal</a></li>
-                <li><a href="#">add a Financial Goal</a></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="#">no more goals!</a></li>
-            </ul>
-        </div>
-    </div>
-    <br>
 
-    <div ng-click="" ng-hide="" class="inputTitle">
-        <h4>Name of Goal</h4>
-        <input required placeholder="Rainy Day Fund" type="text" class="input"></input>
-        <h4>Goal ($)</h4>
-        <input required placeholder="$10,000" type="currency" class="input"></input>
-        <h4>Current ($)</h4>
-        <input required placeholder="$5,000" type="currency" class="input"></input>
-        <h4>By When</h4>
-        <input required placeholder="mm/dd/yyyy" class="input"></input>
-        <br>
-        <div class="btn-group">
-            <button type="button" class="btn btn-default dropdown-toggle finBtn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Add Goal <span class="caret"></span>
-            </button>
-            <ul class="dropdown-menu">
-                <li><a href="#">add another Financial Goal</a></li>
-                <li><a href="#">add a Physical Goal</a></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="#">no more goals!</a></li>
-            </ul>
-        </div>
-        <br>
-    </div>
-</div>
-</div>
+        <!-- Speed Goal -->
+        <div class="col-md-4">
+            <div class="grid mask">
+                <figure style="text-align: center">
+                    <div class="iconDivPhys">
+                        <img class="img-responsive" src="assets/img/speed.png" alt="">
+                    </div>
+                    <figcaption>
+                        <h5>Speed Goal</h5>
+                        <a data-toggle="modal" href="#myModal" class="btn btn-primary btn-lg">Create</a>
+                    </figcaption><!-- /figcaption -->
+                </figure><!-- /figure -->
+            </div><!-- /grid-mask -->
+        </div><!-- /col -->
+
+        <!-- Financial Goal -->
+        <div class="col-md-4">
+            <div class="grid mask">
+                <figure style="text-align: center">
+                    <div class="iconDivFin">
+                        <img class="img-responsive" src="assets/img/money.png" alt="">
+                    </div>
+                    <figcaption>
+                        <h5>Financial Goal</h5>
+                        <a data-toggle="modal" href="#myModal" class="btn btn-primary btn-lg">Create</a>
+                    </figcaption><!-- /figcaption -->
+                </figure><!-- /figure -->
+            </div><!-- /grid-mask -->
+        </div><!-- /col -->
+    </div><!-- /row -->
+
+
+    </div><!-- /row -->
+</div><!-- /row -->
+</div><!-- /container -->
+
+
+<div ng-app="App"></div>
+<div ng-controller="Goals as Goals"></div>

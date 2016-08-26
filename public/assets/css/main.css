@@ -703,6 +703,7 @@ a:after {
   cursor: pointer;
   border-radius: 20px;
   background-color: #ff6d00;
+  padding: 30px;
 }
 
 .physText {
@@ -725,7 +726,8 @@ a:after {
   cursor: pointer;
   border-radius: 20px;
   border-style: hidden;
-  background-color: #8ae429; green
+  background-color: #8ae429; green;
+  padding: 30px;
 }
 
 .divBreak {

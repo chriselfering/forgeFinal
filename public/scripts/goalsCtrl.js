@@ -20,6 +20,8 @@ function Goals(StrFactory, SpdFactory, FinFactory) {
         Goals.strCurrent = ''
         Goals.strByWhen = ''
     }
+//create goal object, after constructor, goal.id = $window... to send to db
+// http.post
 
     Goals.addSpdGoal = function(name, goal, current, byWhen) {
         SpdFactory.addSpdGoal(name, goal, current, byWhen)

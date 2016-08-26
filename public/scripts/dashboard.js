@@ -1,3 +1,4 @@
+(function (){
 angular.module('app.dashboard', ['ngRoute'])
     .controller('DashboardController', Dashboard)
     .config(function($routeProvider) {
@@ -21,6 +22,6 @@ angular.module('app.dashboard', ['ngRoute'])
 
     });
 
-
 function Dashboard() {
     console.info('Dashboard.initialized')}
+})();

@@ -2,9 +2,10 @@
     angular.module('app.auth', []) // declaring an angular module
         .controller('app.auth.controller', Auth) // chaining a controller
 
-    Auth.$inject = ['$http'] // injecting the $http service
+    Auth.$inject = ['$http', '$window'] // injecting the $http service
 
-    function Auth($http) { // auth controller constructor function
+
+    function Auth($http, $window) { // auth controller constructor function
         console.info("Auth.controller:loaded")
 
         var auth = this,
@@ -18,6 +19,7 @@
                 $http.post('/login', auth.payload).then(auth.login.success, auth.login.error)
             },
             success: function(res) {
+                $window.localStorage._id=res.data._id
                 location.href = '/dashboard'
             },
             error: function(err) {

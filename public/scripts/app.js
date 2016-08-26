@@ -1,4 +1,4 @@
-angular.module('App', ['ngRoute'])
+angular.module('App',['ngRoute', 'app.auth', 'app.dashboard'])
 
 angular.module('App')
     .factory('StrFactory', StrFactory)
