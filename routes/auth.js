@@ -1,6 +1,6 @@
 'use strict'
 
-var User = require('../models/user'),
+var User = require('../models/model.user'),
     bcrypt = require('bcryptjs'), // used for encryption
     errors = { // response errors
         general: {
@@ -21,7 +21,7 @@ var User = require('../models/user'),
 
 module.exports = {
     render: (req, res) => {
-        res.render('auth.html', req.session); // render the authenticaiton page (register/login)
+        res.render('auth', req.session); // render the authenticaiton page (register/login)
     },
     logout: (req, res) => {
         req.session.user = null; // clears the users cookie session

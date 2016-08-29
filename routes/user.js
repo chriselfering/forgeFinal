@@ -1,7 +1,7 @@
 // User Controller
 
 // Require the model so we can access the collection
-var User = require('../models/user');
+var User = require('../models/model.user');
 
 module.exports = {
     get : (req, res) => {

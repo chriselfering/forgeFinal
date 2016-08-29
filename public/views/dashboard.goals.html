@@ -1,5 +1,3 @@
-
-<!-- ==== PORTFOLIO ==== -->
 <div class="container" id="portfolio" name="portfolio">
 <br>
     <div class="row">
@@ -29,96 +27,6 @@
                 </figure><!-- /figure -->
             </div><!-- /grid-mask -->
         </div><!-- /col -->
-
-
-
-
-<!-- ===========================Strength Goal Modal start=================================== -->
-                  <div class="modal fade" id="strModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                      <div class="modal-content">
-                        <div class="modal-header" style="background-color: #ff6d00">
-                          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                          <h4 class="modal-title">Create Your Strength Goal</h4>
-                        </div>
-                        <div class="modal-body">
-<!-- ======================Sign Up Form start============================================== -->
-                           <form ng-submit="uCtrl.makeAUser()">
-                               <span>Name of Goal</span><input class="form-control" ng-model="uCtrl.newUser.name" placeholder="Deadlift">
-                               <br>
-                               <span>Start Point (lbs)</span><input class="form-control" type="number" ng-model="uCtrl.newUser.password" placeholder="300">
-                               <br>
-                               <span>Goal Amount (lbs)</span><input class="form-control"  ng-model="uCtrl.newUser.email" type="number" placeholder="450">
-                               <br>
-                               <span>By When</span><input class="form-control"  ng-model="uCtrl.newUser.email" type="date" placeholder="12/31/2016">
-                               <br>
-                               <input type="submit">
-                           </form>
-  <!-- ======================Sign Up Form end================================================= -->
-                        </div>
-                        <div class="modal-footer"></div>
-                      </div><!-- /.modal-content -->
-                    </div><!-- /.modal-dialog -->
-                  </div><!-- /.modal -->
-<!-- ===========================Sign Up Modal end=================================== -->
-
-<!-- ===========================Speed Goal Modal start=================================== -->
-                  <div class="modal fade" id="spdModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                      <div class="modal-content">
-                        <div class="modal-header" style="background-color: #ff6d00">
-                          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                          <h4 class="modal-title">Create Your Speed Goal</h4>
-                        </div>
-                        <div class="modal-body">
-<!-- ======================Sign Up Form start============================================== -->
-                           <form ng-submit="uCtrl.makeAUser()">
-                               <span>Name of Goal</span><input class="form-control" ng-model="uCtrl.newUser.name" placeholder="Run 100m">
-                               <br>
-                               <span>Start Point (min)</span><input class="form-control" type="number" ng-model="uCtrl.newUser.password" placeholder="10">
-                               <br>
-                               <span>Goal Amount (min)</span><input class="form-control"  ng-model="uCtrl.newUser.email" type="number" placeholder="7.5">
-                               <br>
-                               <span>By When</span><input class="form-control"  ng-model="uCtrl.newUser.email" type="date" placeholder="12/31/2016">
-                               <br>
-                               <input type="submit">
-                           </form>
-  <!-- ======================Sign Up Form end================================================= -->
-                        </div>
-                        <div class="modal-footer"></div>
-                      </div><!-- /.modal-content -->
-                    </div><!-- /.modal-dialog -->
-                  </div><!-- /.modal -->
-<!-- ===========================Sign Up Modal end=================================== -->
-
-<!-- ===========================Financial Goal Modal start=================================== -->
-                  <div class="modal fade" id="finModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                      <div class="modal-content">
-                        <div class="modal-header" style="background-color: #ff6d00">
-                          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                          <h4 class="modal-title">Create Your Financial Goal</h4>
-                        </div>
-                        <div class="modal-body">
-<!-- ======================Sign Up Form start============================================== -->
-                           <form ng-submit="uCtrl.makeAUser()">
-                               <span>Name of Goal</span><input class="form-control" ng-model="uCtrl.newUser.name" placeholder="Save for Retirement">
-                               <br>
-                               <span>Start Point ($)</span><input class="form-control" type="number" ng-model="uCtrl.newUser.password" placeholder="500">
-                               <br>
-                               <span>Goal Amount ($)</span><input class="form-control"  ng-model="uCtrl.newUser.email" type="number" placeholder="10,000">
-                               <br>
-                               <span>By When</span><input class="form-control"  ng-model="uCtrl.newUser.email" type="date" placeholder="12/31/2016">
-                               <br>
-                               <input type="submit">
-                           </form>
-  <!-- ======================Sign Up Form end================================================= -->
-                        </div>
-                        <div class="modal-footer"></div>
-                      </div><!-- /.modal-content -->
-                    </div><!-- /.modal-dialog -->
-                  </div><!-- /.modal -->
-<!-- ===========================Sign Up Modal end=================================== -->
 
         <!-- Speed Goal -->
         <div class="col-md-4">
@@ -156,6 +64,90 @@
 </div><!-- /row -->
 </div><!-- /container -->
 
+<!-- ===========================Strength Goal Modal start=================================== -->
+                  <div class="modal fade" id="strModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header" style="background-color: #ff6d00">
+                          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                          <h4 class="modal-title">Create Your Strength Goal</h4>
+                        </div>
+                        <div class="modal-body">
+<!-- ====================== Form start============================================== -->
+                           <form ng-submit="gCtrl.makeAUser()">
+                               <span>Name of Goal</span><input class="form-control" ng-model="gCtrl.newGoal.name" placeholder="Deadlift">
+                               <br>
+                               <span>Start Point (lbs)</span><input class="form-control" type="number" ng-model="gCtrl.newGoal.startAmount" placeholder="300">
+                               <br>
+                               <span>Goal Amount (lbs)</span><input class="form-control"  ng-model="gCtrl.newGoal.goalAmount" type="number" placeholder="450">
+                               <br>
+                               <span>By When</span><input class="form-control"  ng-model="gCtrl.newGoal.byWhen" type="date" placeholder="12/31/2016">
+                               <br>
+                               <input type="submit">
+                           </form>
+  <!-- ======================Sign Up Form end================================================= -->
+                        </div>
+                        <div class="modal-footer"></div>
+                      </div><!-- /.modal-content -->
+                    </div><!-- /.modal-dialog -->
+                  </div><!-- /.modal -->
+<!-- ===========================Sign Up Modal end=================================== -->
 
-<div ng-app="App"></div>
-<div ng-controller="Goals as Goals"></div>
+<!-- ===========================Speed Goal Modal start=================================== -->
+                  <div class="modal fade" id="spdModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header" style="background-color: #ff6d00">
+                          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                          <h4 class="modal-title">Create Your Speed Goal</h4>
+                        </div>
+                        <div class="modal-body">
+<!-- ======================Form start============================================== -->
+                           <form ng-submit="gCtrl.makeAUser()">
+                               <span>Name of Goal</span><input class="form-control" ng-model="gCtrl.newGoal.name" placeholder="Run 100m">
+                               <br>
+                               <span>Start Point (min)</span><input class="form-control" type="number" ng-model="gCtrl.newGoal.startAmount" placeholder="10">
+                               <br>
+                               <span>Goal Amount (min)</span><input class="form-control"  ng-model="gCtrl.newGoal.goalAmount" type="number" placeholder="7.5">
+                               <br>
+                               <span>By When</span><input class="form-control"  ng-model="gCtrl.newGoal.byWhen" type="date" placeholder="12/31/2016">
+                               <br>
+                               <input type="submit">
+                           </form>
+  <!-- ======================Sign Up Form end================================================= -->
+                        </div>
+                        <div class="modal-footer"></div>
+                      </div><!-- /.modal-content -->
+                    </div><!-- /.modal-dialog -->
+                  </div><!-- /.modal -->
+<!-- ===========================Sign Up Modal end=================================== -->
+
+<!-- ===========================Financial Goal Modal start=================================== -->
+                  <div class="modal fade" id="finModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header" style="background-color: #ff6d00">
+                          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                          <h4 class="modal-title">Create Your Financial Goal</h4>
+                        </div>
+                        <div class="modal-body">
+<!-- ======================Sign Up Form start============================================== -->
+                           <form ng-submit="gCtrl.makeAUser()">
+                               <span>Name of Goal</span><input class="form-control" ng-model="gCtrl.newGoal.name" placeholder="Save for Retirement">
+                               <br>
+                               <span>Start Point ($)</span><input class="form-control" type="number" ng-model="gCtrl.newGoal.password" placeholder="500">
+                               <br>
+                               <span>Goal Amount ($)</span><input class="form-control"  ng-model="gCtrl.newGoal.email" type="number" placeholder="10,000">
+                               <br>
+                               <span>By When</span><input class="form-control"  ng-model="gCtrl.newGoal.email" type="date" placeholder="12/31/2016">
+                               <br>
+                               <input type="submit">
+                           </form>
+  <!-- ======================Sign Up Form end================================================= -->
+                        </div>
+                        <div class="modal-footer"></div>
+                      </div><!-- /.modal-content -->
+                    </div><!-- /.modal-dialog -->
+                  </div><!-- /.modal -->
+<!-- ===========================Sign Up Modal end=================================== -->
+        <div style="height: 250px;"></div>

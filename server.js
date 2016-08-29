@@ -4,7 +4,6 @@ var express = require('express'), // our framework!
     bodyParser = require('body-parser'), // used for POST routes to obtain the POST payload as a property on `req`
     path = require('path'), // used to resolve paths across OSes
     logger = require('morgan'), // log the routes being accessed by the frontend
-    ejs = require('ejs'), // used for server-side templating
     mongoose = require('mongoose'),
     sessions = require('client-sessions')({ // session cookie
         cookieName : "_myAppName", // cookie name (within document.cookies on the Frontend)
@@ -37,10 +36,7 @@ app.use(sessions) // mounting HTTPs session cookies
 app.use(express.static(path.join(__dirname,'public')))
 
 // enable server-side rendering
-app.set('view engine', 'html')
-
-// use EJS as a templating engine
-app.engine('html', ejs.renderFile)
+app.set('view engine', 'ejs')
 
 // mount the body-parsing middleware to parse payload strings into `body` object stored in `req.body`
 app.post('*', bodyParser.json(), bodyParser.urlencoded({ extended:true }))

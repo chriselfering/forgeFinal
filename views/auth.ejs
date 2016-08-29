@@ -1,40 +1,32 @@
 <!DOCTYPE html>
-<html ng-app="app.auth">
-<head>
+<html ng-app="module.auth">
 
+<head>
+    <title> forge log in </title>
     <!-- jQuery and Bootstrap -->
-    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.js"></script>
+    <script src="//code.jquery.com/jquery-2.2.4.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.js"></script>
     <!-- Angular main and route CDN -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular-route.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.js"></script>
-    <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-    <script type="text/javascript" src="scripts/app.js"></script>
-    <script type="text/javascript" src="scripts/app.controller.user.js"></script>
-    <script type="text/javascript" src="scripts/app.Factory.api.js"></script>
-    <script type="text/javascript" src="scripts/goalsCtrl.js"></script>
-    <script type="text/javascript" src="scripts/chartCtrl.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular-route.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.js"></script>
+    <script src="//d3js.org/d3.v3.min.js"></script>
+
+    <!-- my app scripts -->
+    <script src="scripts/module.auth.js"></script>
 
   <link rel="shortcut icon" href="/assets/ico/favicon.png">
 
-  <title> forge log in </title>
-
   <!-- Bootstrap core CSS -->
-  <link href="assets/css/bootstrap.css" rel="stylesheet">
-
+  <link rel="stylesheet" href="/assets/css/bootstrap.css">
   <!-- Custom styles  ----------->
-  <link href="assets/css/main.css" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/icomoon.css">
-  <link href="assets/css/animate-custom.css" rel="stylesheet">
-
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/icomoon.css">
+  <link rel="stylesheet" href="assets/css/animate-custom.css">
   <script src="assets/js/jquery.min.js"></script>
-<script type="text/javascript" src="assets/js/modernizr.custom.js"></script>
-
-<script src="/scripts/auth.js"></script>
-
+  <script src="assets/js/modernizr.custom.js"></script>
 </head>
-    <body ng-controller="app.auth.controller as auth" class="containter">
+    <body ng-controller="module.auth.controller as auth" class="containter">
 
         <div id="navbar-main">
             <!-- Nav tabs -->

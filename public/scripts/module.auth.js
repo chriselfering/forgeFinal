@@ -1,6 +1,5 @@
-(function(){
-    angular.module('app.auth', []) // declaring an angular module
-        .controller('app.auth.controller', Auth) // chaining a controller
+angular.module('module.auth', []) // declaring an angular module
+        .controller('module.auth.controller', Auth) // chaining a controller
 
     Auth.$inject = ['$http', '$window'] // injecting the $http service
 
@@ -42,4 +41,3 @@
             }
         }
     }
-})()

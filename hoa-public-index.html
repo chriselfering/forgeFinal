@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html ng-app="HeroesOfAjax">
+    <head>
+        <title>Heroes of AJAX!</title>
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.css">
+        <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.js"></script>
+
+        <script src="/scripts/app.module.js"></script>
+        <script src="/scripts/app.controller.heroes.js"></script>
+        <script src="/scripts/app.factory.api.js"></script>
+
+    </head>
+    <body ng-controller="heroesController as hCtrl" class="container">
+        <!--{{hCtrl.hqList}}-->
+        <h1>Hero Form</h1>
+        <form ng-submit="hCtrl.makeAHero()">
+            <input class="form-control" ng-model="hCtrl.newHero.name" placeholder="Name">
+
+            <input ng-repeat="power in hCtrl.newHero.powers track by $
+
+            " class="form-control" ng-model="hCtrl.newHero.powers[$index]"
+            placeholder="Power">
+
+            <input ng-repeat="weak in hCtrl.newHero.weaknesses track by $index" class="form-control" ng-model="hCtrl.newHero.weaknesses[$index]"
+            placeholder="Weakness">
+
+            <input class="form-control" type="checkbox" ng-model="hCtrl.newHero.masked">
+
+            <input class="form-control" ng-model="hCtrl.newHero.origin"
+            placeholder="Origin">
+
+            <select
+            ng-model="hCtrl.newHero.headquarters" class="form-control"
+            ng-options="hq._id as hq.name for hq in hCtrl.hqList"
+            >
+            <!--VALUE as DISPLAY for OBJ in LIST-->
+                <option value="" selected disabled>Choose HQ</option>
+
+            </select>
+
+            <input type="submit">
+
+            <div ng-click="hCtrl.pwExtra('powers')" class="btn btn-info"> Add Power </div>
+            <div ng-click="hCtrl.pwExtra('weaknesses')" class="btn btn-info"> Add Weakness </div>
+        </form>
+
+        <h1>Headquarter Form</h1>
+
+        <form ng-submit="hCtrl.makeAnHQ()">
+            <input class="form-control" ng-model="hCtrl.newHQ.name", placeholder="Name">
+            <input class="form-control" type="checkbox" ng-model="hCtrl.newHQ.butler", placeholder="Butler">
+            <input class="form-control" ng-model="hCtrl.newHQ.moatType", placeholder="Moat Type">
+             <input class="form-control" ng-repeat="amenity in hCtrl.newHQ.amenities track by $index" ng-model="hCtrl.newHQ.amenities[$index]", placeholder="Amenity">
+
+             <input type="submit">
+             <div ng-click="hCtrl.addAmenity()" class="btn btn-primary"> Add Amenity </div>
+        </form>
+
+
+    <div class="row">
+        <div class="col-xs-12">
+            <h1>Heroes List : </h1>
+        </div>
+        <div ng-repeat="hero in hCtrl.heroList" class="col-xs-12">
+            {{ hero.name }}
+        </div>
+    </div>
+
+    </body>
+</html>

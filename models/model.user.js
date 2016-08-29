@@ -9,8 +9,6 @@ var mongoose = require('mongoose'),
         email    : { type: String, unique: true },
         password : String,
         created  : Number, // Date.now()
-        goals    : Array,
-        habits   : Array
     });
 
 // hash passwords before saving them
