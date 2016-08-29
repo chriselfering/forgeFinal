@@ -11,7 +11,7 @@ var express = require('express'), // our framework!
         cookieName : "_myAppName", // cookie name (within document.cookies on the Frontend)
         secret: 'My$uP3R@W3$0M3$3CR3+', // encryption secret
         requestKey: 'session', // stores the session cookie in req.session
-        duration: 86400, // one week in seconds = 60 * 60 * 24
+        duration: 604800000, // one week in seconds = 60 * 60 * 24
         cookie: {
             ephemeral: false,   // when true, cookie expires when the browser closes
             httpOnly: true,     // when true, cookie is not accessible from javascript
