@@ -96,10 +96,10 @@
             <div class="col-md-4 ">
                 <div class="grid mask">
                     <figure>
-                        <img class="img-responsive" src="assets/img/portfolio/folio01.jpg" alt="">
+                        <img class="img-responsive" src="assets/img/charts.png" alt="">
                         <figcaption>
-                            <h5>DASHBOARD</h5>
-                            <a data-toggle="modal" href="#myModal" class="btn btn-primary btn-lg">Take a Look</a>
+                            <h5>Goal Charts</h5>
+                            <a data-toggle="modal" href="#chartsModal" class="btn btn-primary btn-lg">Take a Look</a>
                         </figcaption><!-- /figcaption -->
                     </figure><!-- /figure -->
                 </div><!-- /grid-mask -->
@@ -109,16 +109,16 @@
                      <!-- MODAL SHOW THE PORTFOLIO IMAGE. In this demo, all links point to this modal. You should create
                           a modal for each of your projects. -->
 
-                      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                      <div class="modal fade" id="chartsModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                         <div class="modal-dialog">
                           <div class="modal-content">
                             <div class="modal-header">
                               <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                              <h4 class="modal-title">Project Title</h4>
+                              <h4 class="modal-title">Goal Charts</h4>
                             </div>
                             <div class="modal-body">
-                              <p><img class="img-responsive" src="assets/img/portfolio/folio01.jpg" alt=""></p>
-                              <p>This project was crafted for Some Name corp. Detail here a little about your job requirements and the tools used. Tell about the challenges faced and what you and your team did to solve it.</p>
+                              <p><img class="img-responsive" src="assets/img/charts.png" alt=""></p>
+                              <p>Enter and track your goals. Then view them as easy-to-read charts on your personal dashboard.</p>
                               <p><b><a href="#">Visit Site</a></b></p>
                             </div>
                             <div class="modal-footer">
@@ -128,42 +128,56 @@
                         </div><!-- /.modal-dialog -->
                       </div><!-- /.modal -->
 
-    <!-- ===========================Sign Up Modal start=================================== -->
-                      <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                          <div class="modal-content">
-                            <div class="modal-header" style="background-color: #ff6d00">
-                              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                              <h4 class="modal-title">Sign Up</h4>
-                            </div>
-                            <div class="modal-body">
-    <!-- ======================Sign Up Form start============================================== -->
-                               <form ng-submit="uCtrl.makeAUser()">
-                                   <input class="form-control" ng-model="uCtrl.newUser.name" placeholder="Name">
-                                   <br>
-                                   <input class="form-control" type="password" ng-model="uCtrl.newUser.password" placeholder="Password">
-                                   <br>
-                                   <input class="form-control" type="email" ng-model="uCtrl.newUser.email" placeholder="Email Address">
-                                   <br>
-                                   <input type="submit">
-                               </form>
-      <!-- ======================Sign Up Form end================================================= -->
-                            </div>
-                            <div class="modal-footer"></div>
-                          </div><!-- /.modal-content -->
-                        </div><!-- /.modal-dialog -->
-                      </div><!-- /.modal -->
-    <!-- ===========================Sign Up Modal end=================================== -->
+                      <!-- Modal Habits -->
 
+                       <div class="modal fade" id="habitModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                         <div class="modal-dialog">
+                           <div class="modal-content">
+                             <div class="modal-header">
+                               <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                               <h4 class="modal-title">Habit Tracker</h4>
+                             </div>
+                             <div class="modal-body">
+                               <p><img class="img-responsive" src="assets/img/habits.png" alt=""></p>
+                               <p>Create a group of habits you'd like to track (physical and financial). Then track your adherence to those habits, shooting for 100%!</p>
+                               <p><b><a href="#">Visit Site</a></b></p>
+                             </div>
+                             <div class="modal-footer">
+                               <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                             </div>
+                           </div><!-- /.modal-content -->
+                         </div><!-- /.modal-dialog -->
+                       </div><!-- /.modal -->
+
+                       <!-- Modal Lists -->
+
+                        <div class="modal fade" id="listModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                <h4 class="modal-title">Personalized Lists</h4>
+                              </div>
+                              <div class="modal-body">
+                                <p><img class="img-responsive" src="assets/img/lists.png" alt=""></p>
+                                <p>Create lists of items you want to remember, like books you want to read or movies you want to watch.</p>
+                                <p><b><a href="#">Visit Site</a></b></p>
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                              </div>
+                            </div><!-- /.modal-content -->
+                          </div><!-- /.modal-dialog -->
+                        </div><!-- /.modal -->
 
             <!-- PORTFOLIO IMAGE 2 -->
             <div class="col-md-4">
                 <div class="grid mask">
                     <figure>
-                        <img class="img-responsive" src="assets/img/portfolio/folio02.jpg" alt="">
+                        <img class="img-responsive" src="assets/img/habits.png" alt="">
                         <figcaption>
-                            <h5>UI DESIGN</h5>
-                            <a data-toggle="modal" href="#myModal" class="btn btn-primary btn-lg">Take a Look</a>
+                            <h5>Habit Tracker</h5>
+                            <a data-toggle="modal" href="#habitModal" class="btn btn-primary btn-lg">Take a Look</a>
                         </figcaption><!-- /figcaption -->
                     </figure><!-- /figure -->
                 </div><!-- /grid-mask -->
@@ -173,17 +187,17 @@
             <div class="col-md-4">
                 <div class="grid mask">
                     <figure>
-                        <img class="img-responsive" src="assets/img/portfolio/folio03.jpg" alt="">
+                        <img class="img-responsive" src="assets/img/lists.png" alt="">
                         <figcaption>
-                            <h5>ANDROID PAGE</h5>
-                            <a data-toggle="modal" href="#myModal" class="btn btn-primary btn-lg">Take a Look</a>
+                            <h5>Personalized Lists</h5>
+                            <a data-toggle="modal" href="#listModal" class="btn btn-primary btn-lg">Take a Look</a>
                         </figcaption><!-- /figcaption -->
                     </figure><!-- /figure -->
                 </div><!-- /grid-mask -->
             </div><!-- /col -->
         </div><!-- /row -->
 
-            
+
         </div><!-- /row -->
     </div><!-- /row -->
     </div><!-- /container -->

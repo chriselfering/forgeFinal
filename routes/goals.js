@@ -19,7 +19,7 @@ module.exports = {
         }
         else {
             // No id in the url, create a new document
-            var newGoal = new Goal(req.body);
+            var newGoal = new Goals(req.body);
 
             // Save goal to DB
             newGoal.save(function(err, goal){

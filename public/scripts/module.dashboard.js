@@ -39,31 +39,28 @@ function goalsCtrl (apiFactory){
         // goalAmount  : Number,
         // byWhen      : Date
     };
-    hCtrl.retrieveHeroes = function(){
+    gCtrl.retrieveGoals = function(){
             apiFactory
-                .getHeroes()
+                .getGoal()
                 .then(function(response){
-                    hCtrl.heroList = response.data;
+                    gCtrl.goalList = response.data;
                 });
         }
-        hCtrl.retrieveHeroes();
+        gCtrl.retrieveGoals();
         // console.log(apiFactory)
 
-        hCtrl.makeAHero = function () {
+        gCtrl.makeAGoal = function () {
             apiFactory
-                .createHero(hCtrl.newHero)
+                .createGoal(gCtrl.newGoal)
                 .then(function(response){
                     console.log(response);
-                    hCtrl.retrieveHeroes();
+                    gCtrl.retrieveGoals();
                 });
         }
 
-        hCtrl.pwExtra = function (which) {
-            hCtrl.newHero[which].push('');
+        gCtrl.pwExtra = function (which) {
+            gCtrl.newGoal[which].push('');
         }
-
-
-
 }
 
 // =============================================================
@@ -75,12 +72,12 @@ apiFact.$inject = ['$http']
 // Our factory will be the MAIN place we make calls to the backend
 function apiFact ($http){
 
-   // function getUser () {
-   //     return $http.get('/api/goals')
-   // }
-   // function createUser (goalsData) {
-   //     return $http.post('/api/goals', goalsData)
-   // }
+   function getGoal () {
+       return $http.get('/dashboard/goals')
+   }
+   function createGoal (goalsData) {
+       return $http.post('/dashboard/goals', goalsData)
+   }
 
    // This return value is exactly what we gain access to in the controller
    return {
