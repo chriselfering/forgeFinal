@@ -7,4 +7,11 @@
     <h1> More charts go here! </h1>
 
 </div>
-<div ng-controller="goalsController as gCtrl"></div>
+
+<div ng-repeat="goal in cCtrl.goalList">
+    {{ goal.name }}
+    {{ goal.startAmount }}
+    {{ goal.goalAmount }}
+    {{ goal.byWhen }}
+    Div is here
+</div>

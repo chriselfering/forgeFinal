@@ -1,16 +1,13 @@
 angular.module('module.dashboard', ['ngRoute'])
     // .controller('DashboardController', Dashboard)
     .controller('goalsController', goalsCtrl)
+    .controller('chartsController', chartsCtrl)
     .factory('apiFactory', apiFact)
     .config(function($routeProvider) {
 
-        $routeProvider.when('/', {
-            templateUrl: '/views/dashboard.goals.html',
-            controller: 'goalsController as uCtrl'
-        });
         $routeProvider.when('/goals', {
             templateUrl: '/views/dashboard.goals.html',
-            controller: 'goalsController as uCtrl'
+            controller: 'goalsController as gCtrl'
         });
         $routeProvider.when('/habits', {
             templateUrl: '/views/dashboard.habits.html'
@@ -19,9 +16,10 @@ angular.module('module.dashboard', ['ngRoute'])
             templateUrl: '/views/dashboard.lists.html'
         });
         $routeProvider.when('/charts', {
-            templateUrl: '/views/dashboard.charts.html'
+            templateUrl: '/views/dashboard.charts.html',
+            controller: 'chartsController as cCtrl'
         });
-        $routeProvider.otherwise({ redirectTo: '/' });
+        $routeProvider.otherwise({ redirectTo: '/goals' });
     });
 
 // ========================================================
@@ -39,28 +37,19 @@ function goalsCtrl (apiFactory){
         // goalAmount  : Number,
         // byWhen      : Date
     };
-    gCtrl.retrieveGoals = function(){
-            apiFactory
-                .getGoal()
-                .then(function(response){
-                    console.log(response)
-                    gCtrl.goalList = response.data;
-                });
-        }
-        gCtrl.retrieveGoals();
-        // console.log(apiFactory)
 
-        gCtrl.makeAGoal = function () {
-            apiFactory
-                .createGoal(gCtrl.newGoal)
-                .then(function(response){
-                    console.log(response);
-                });
-        }
 
-        gCtrl.pwExtra = function (which) {
-            gCtrl.newGoal[which].push('');
-        }
+    gCtrl.makeAGoal = function () {
+        apiFactory
+            .createGoal(gCtrl.newGoal)
+            .then(function(response){
+                console.log(response);
+            });
+    }
+
+    gCtrl.pwExtra = function (which) {
+        gCtrl.newGoal[which].push('');
+    }
 }
 
 // =============================================================
@@ -168,3 +157,24 @@ function apiFact ($http){
 // }
 //
 // render(data);
+
+// =============================================================
+// Charts Controller
+// =============================================================
+
+chartsCtrl.$inject = ['apiFactory']
+
+function chartsCtrl (apiFactory){
+    var cCtrl = this;
+    cCtrl.retrieveGoals = function(){
+        apiFactory
+            .getGoal()
+            .then(function(response){
+                console.log(response)
+                cCtrl.goalList = response.data;
+            });
+    }
+
+    cCtrl.retrieveGoals();
+}
+// console.log(apiFactory)

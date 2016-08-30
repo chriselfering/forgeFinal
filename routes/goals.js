@@ -16,9 +16,11 @@ console.log(req.session)
         // Create / Update
         if(req.params.id){
             // Update existing document
-        }
-        else {
-            console.log(req.body)
+        } else {
+            console.log('Incoming goal:', req.body);
+
+            req.body.userId = req.session.user._id;
+
             // No id in the url, create a new document
             var newGoal = new Goals(req.body);
 
