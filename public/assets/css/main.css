@@ -879,3 +879,24 @@ a:after {
     background-color: indianred;
     position: absolute;
 }
+
+/*=======================================================
+Chart Styling
+=======================================================*/
+
+.axis text {
+  font-family: 'Helvetica', sans-serif;
+  font-size: 12pt;
+}
+.axis .label {
+  font-size: 20pt;
+}
+.axis path, .axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+.color-legend text {
+  font-family: 'Helvetica', sans-serif;
+  font-size: 12pt;
+}
