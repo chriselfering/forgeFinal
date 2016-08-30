@@ -3,7 +3,7 @@ var Goals = require('../models/model.goals')
 module.exports = {
     get : (req, res) => {
         // Read
-
+console.log(req.session)
         // Without Populate, allows you to attach to userId
         Goals.find({
             userId: req.session.user._id       //eventually you may write if statement to check if user exists
@@ -18,6 +18,7 @@ module.exports = {
             // Update existing document
         }
         else {
+            console.log(req.body)
             // No id in the url, create a new document
             var newGoal = new Goals(req.body);
 

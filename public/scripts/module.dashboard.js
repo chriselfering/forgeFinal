@@ -43,6 +43,7 @@ function goalsCtrl (apiFactory){
             apiFactory
                 .getGoal()
                 .then(function(response){
+                    console.log(response)
                     gCtrl.goalList = response.data;
                 });
         }
@@ -54,7 +55,6 @@ function goalsCtrl (apiFactory){
                 .createGoal(gCtrl.newGoal)
                 .then(function(response){
                     console.log(response);
-                    gCtrl.retrieveGoals();
                 });
         }
 
@@ -88,9 +88,9 @@ function apiFact ($http){
 
 // ===============================================================
 // D3 Chart for Strength Goal
+
 // ===============================================================
 
-console.log(apiFact.getGoal);
 
 // var data = apiFact.getGoal;
 //
