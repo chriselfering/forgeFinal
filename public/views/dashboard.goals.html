@@ -135,11 +135,11 @@
                            <form ng-submit="gCtrl.makeAGoal('financial')">
                                <span>Name of Goal</span><input class="form-control" ng-model="gCtrl.newGoal.name" placeholder="Save for Retirement">
                                <br>
-                               <span>Start Point ($)</span><input class="form-control" type="number" ng-model="gCtrl.newGoal.password" placeholder="500">
+                               <span>Start Point ($)</span><input class="form-control" type="number" ng-model="gCtrl.newGoal.startAmount" placeholder="500">
                                <br>
-                               <span>Goal Amount ($)</span><input class="form-control"  ng-model="gCtrl.newGoal.email" type="number" placeholder="10,000">
+                               <span>Goal Amount ($)</span><input class="form-control"  ng-model="gCtrl.newGoal.goalAmount" type="number" placeholder="10,000">
                                <br>
-                               <span>By When</span><input class="form-control"  ng-model="gCtrl.newGoal.email" type="date" placeholder="12/31/2016">
+                               <span>By When</span><input class="form-control"  ng-model="gCtrl.newGoal.byWhen" type="date" placeholder="12/31/2016">
                                <br>
                                <input type="submit">
                            </form>

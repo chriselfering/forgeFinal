@@ -900,3 +900,20 @@ Chart Styling
   font-family: 'Helvetica', sans-serif;
   font-size: 12pt;
 }
+.finChart {
+    background-color: #8ae429; green;
+    width: 100%;
+    min-height: 500px;
+}
+.physChart {
+    background-color: #ff6d00; orange;
+    width: 100%;
+    min-height: 500px;
+}
+.chartTitle {
+    color: white;
+    font-weight: bold;
+    margin-left: 50px;
+    padding-top: 50px;
+    font-family: Helvetica;
+}

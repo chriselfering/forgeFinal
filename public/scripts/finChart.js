@@ -1,14 +1,14 @@
-function finChart = {
+function finChart (cCtrl.data) {
     if(type === "financial"){
 
-        // var data = (db)
+        var data = cCtrl.data;
         var outerWidth = 1000;
         var outerHeight = 500;
         var margin = { left: 90, top: 30, right: 30, bottom: 40 };
         var barPadding = 0.2;
         var xColumn = "name";
-        var yColumn = "population";
-        var colorColumn = "religion";  // need startAmount & goalAmount
+        var yColumn = "value";        // total amount? need to group the two
+        var colorColumn = "amountType";  // need startAmount & goalAmount
         var layerColumn = colorColumn;
         var innerWidth  = outerWidth  - margin.left - margin.right;
         var innerHeight = outerHeight - margin.top  - margin.bottom;

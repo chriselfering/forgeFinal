@@ -1,18 +1,26 @@
-<div>
-    <div class="divBreakMd"></div>
-    <h1> Beautiful charts go here! </h1>
+    <br>
+    <br>
+    <br>
     <br>
     <hr>
     <br>
-    <h1> More charts go here! </h1>
+
 
 </div>
 
-<div ng-repeat="goal in cCtrl.goalList">
+<!-- <div ng-repeat="goal in cCtrl.goalList">
     {{ goal.name }}
     {{ goal.startAmount }}
     {{ goal.goalAmount }}
     {{ goal.byWhen }}
-    {{ goal.type }}
-
-</div>
+    {{ goal.type }} -->
+    <div ng-show="cCtrl.strengthData.length > 0" class="physChart">
+            <h1 class="chartTitle"> Strength Goals </h1>
+    </div>
+    <div ng-show="cCtrl.speedData.length > 0" class="physChart">
+        <h1 class="chartTitle"> Speed Goals </h1>
+    </div>
+    <div ng-show="cCtrl.financialData.length > 0" class="finChart">
+        <h1 class="chartTitle"> Financial Goals </h1>
+    </div>
+<!-- </div> -->
