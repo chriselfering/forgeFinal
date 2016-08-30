@@ -39,7 +39,8 @@ function goalsCtrl (apiFactory){
     };
 
 
-    gCtrl.makeAGoal = function () {
+    gCtrl.makeAGoal = function (type) {
+        gCtrl.newGoal.type = type
         apiFactory
             .createGoal(gCtrl.newGoal)
             .then(function(response){

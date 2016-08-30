@@ -74,7 +74,7 @@
                         </div>
                         <div class="modal-body">
 <!-- ====================== Strength Goal Form start============================================== -->
-                           <form ng-submit="gCtrl.makeAGoal()">
+                           <form ng-submit="gCtrl.makeAGoal('strength')">
                                <span>Name of Goal</span><input class="form-control" ng-model="gCtrl.newGoal.name" placeholder="Deadlift">
                                <br>
                                <span>Start Point (lbs)</span><input class="form-control" type="number" ng-model="gCtrl.newGoal.startAmount" placeholder="300">
@@ -103,7 +103,7 @@
                         </div>
                         <div class="modal-body">
 <!-- ======================Speed Goal Form start============================================== -->
-                           <form ng-submit="gCtrl.makeAGoal()">
+                           <form ng-submit="gCtrl.makeAGoal('speed')">
                                <span>Name of Goal</span><input class="form-control" ng-model="gCtrl.newGoal.name" placeholder="Run 100m">
                                <br>
                                <span>Start Point (min)</span><input class="form-control" type="number" ng-model="gCtrl.newGoal.startAmount" placeholder="10">
@@ -132,7 +132,7 @@
                         </div>
                         <div class="modal-body">
 <!-- ======================Financial Goal Form start============================================== -->
-                           <form ng-submit="gCtrl.makeAGoal()">
+                           <form ng-submit="gCtrl.makeAGoal('financial')">
                                <span>Name of Goal</span><input class="form-control" ng-model="gCtrl.newGoal.name" placeholder="Save for Retirement">
                                <br>
                                <span>Start Point ($)</span><input class="form-control" type="number" ng-model="gCtrl.newGoal.password" placeholder="500">

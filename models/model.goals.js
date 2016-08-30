@@ -6,6 +6,7 @@ var mongoose = require('mongoose'),
         startAmount : Number,
         goalAmount  : Number,
         byWhen      : Date, // Date.now()
+        type        : String
     });
 
 module.exports = mongoose.model('Goals', GoalsSchema)

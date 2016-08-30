@@ -19,7 +19,7 @@ console.log(req.session)
         } else {
             console.log('Incoming goal:', req.body);
 
-            req.body.userId = req.session.user._id;
+            req.body.userId = req.session.user._id;    //attaches goal to userId
 
             // No id in the url, create a new document
             var newGoal = new Goals(req.body);
