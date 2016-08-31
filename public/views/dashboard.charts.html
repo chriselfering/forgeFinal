@@ -1,27 +1,21 @@
     <br>
     <br>
-    <br>
-    <br>
-    <hr>
-    <br>
 
-
-</div>
-
-<!-- <div ng-repeat="goal in cCtrl.goalList">     //test to see if pulling from db
-    {{ goal.name }}
-    {{ goal.startAmount }}
-    {{ goal.goalAmount }}
-    {{ goal.byWhen }}
-    {{ goal.type }} -->
-    
     <div ng-show="cCtrl.strengthData.length > 0" class="physChart">
-            <h1 class="chartTitle"> Strength Goals </h1>
+        <h1 class="chartTitle"> Strength Goals (lbs) </h1>
+        <div id="strChart"></div>
+        <div class="legendBox">
+            <div class="legendWhite"></div> <p class="legendText">Start</p>
+            <div class="legendOrange"></div> <p class="legendText">Goal</p>
+        </div>
     </div>
     <div ng-show="cCtrl.speedData.length > 0" class="physChart">
-        <h1 class="chartTitle"> Speed Goals </h1>
+        <h1 class="chartTitle"> Speed Goals (min) </h1>
+        <div id="spdChart"></div>
     </div>
     <div ng-show="cCtrl.financialData.length > 0" class="finChart">
-        <h1 class="chartTitle"> Financial Goals </h1>
+        <h1 class="chartTitle"> Financial Goals ($) </h1>
+        <div id="finChart"></div>
     </div>
-<!-- </div> -->
+    <br>
+    <br>

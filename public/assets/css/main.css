@@ -885,20 +885,24 @@ Chart Styling
 =======================================================*/
 
 .axis text {
-  font-family: 'Helvetica', sans-serif;
-  font-size: 12pt;
+  font-family: 'Helvetica';
+  font-size: 15;
+  fill: white;
 }
 .axis .label {
-  font-size: 20pt;
+  font-size: 15;
+  fill: white;
 }
 .axis path, .axis line {
   fill: none;
-  stroke: #000;
+  stroke: white;
   shape-rendering: crispEdges;
 }
 .color-legend text {
-  font-family: 'Helvetica', sans-serif;
+  font-family: 'Helvetica';
   font-size: 12pt;
+  fill: white;
+  /*margin-left: 30px;*/
 }
 .finChart {
     background-color: #8ae429; green;
@@ -916,4 +920,28 @@ Chart Styling
     margin-left: 50px;
     padding-top: 50px;
     font-family: Helvetica;
+    font-size: 70px;
+}
+.strChart {
+    height: 500px;
+}
+.finChart {
+    height: 500px;
+}
+.legendWhite {
+    fill: white;
+    height: 30px;
+    width: 30px;
+}
+.legendOrange {
+    fill: #ffa766;
+    height: 30px;
+    width: 30px;
+}
+.legendBox {
+    display: flex;
+    justify-content: space-around;
+}
+.legendText {
+    color: white;
 }
