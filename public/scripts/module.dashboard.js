@@ -100,6 +100,7 @@ function chartsCtrl (apiFactory){
 
                 cCtrl.goalList.forEach(function(goal){
                     var goalFinal = goal.goalAmount - goal.startAmount
+                    var spdGoal =  goal.startAmount - goal.goalAmount
                     if(goal.type === "strength"){
                         cCtrl.strengthData.push(
                         {
@@ -120,13 +121,13 @@ function chartsCtrl (apiFactory){
                             {
                                 name        : goal.name,
                                 amountType  : 'start',
-                                value       : goal.startAmount,
+                                value       : goal.goalAmount,
                                 type        : goal.type
                             },
                             {
                                 name        : goal.name,
                                 amountType  : 'goal',
-                                value       : goalFinal,
+                                value       : spdGoal,
                                 type        : goal.type
                             }
                             )
@@ -201,6 +202,7 @@ function chartsCtrl (apiFactory){
         var nested = d3.nest()
               .key(function (d){ return d[layerColumn]; })
               .entries(data)
+
         var stack = d3.layout.stack()
               .y(function (d){ return d[yColumn]; })
               .values(function (d){ return d.values; });
@@ -208,6 +210,7 @@ function chartsCtrl (apiFactory){
             xScale.domain(layers[0].values.map(function (d){
               return d[xColumn];
             }));
+
         yScale.domain([
           0,
           d3.max(layers, function (layer){
@@ -228,7 +231,7 @@ function chartsCtrl (apiFactory){
           return colorScale(d.key);
         });
         var bars = layers.selectAll("rect").data(function (d){
-          return d.values;
+            return d.values;
         });
             bars.enter().append("rect")
             bars.exit().remove();
@@ -275,7 +278,7 @@ function chartsCtrl (apiFactory){
         var xScale = d3.scale.ordinal().rangeBands([0, innerWidth], barPadding);
         var yScale = d3.scale.linear().range([innerHeight, 0]);
         var colorScale = d3.scale.ordinal();
-            colorScale.range(["white", "#ffa766"]);
+            colorScale.range(["#ffa766", "white"]);
         // Use a modified SI formatter that uses "B" for Billion.
         var siFormat = d3.format("s");
         var customTickFormat = function (d){
