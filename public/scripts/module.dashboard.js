@@ -156,13 +156,13 @@ function chartsCtrl (apiFactory){
 
     var makeChart = function(data){
 
-        var outerWidth = 500;
-        var outerHeight = 250;
+        var outerWidth = 700;
+        var outerHeight = 300;
         var margin = { left: 90, top: 30, right: 30, bottom: 40 };
         var barPadding = 0.2;
-        var xColumn = "country";
-        var yColumn = "population";
-        var colorColumn = "religion";
+        var xColumn = "name";
+        var yColumn = "value";
+        var colorColumn = "amountType";
         var layerColumn = colorColumn;
         var innerWidth  = outerWidth  - margin.left - margin.right;
         var innerHeight = outerHeight - margin.top  - margin.bottom;
@@ -181,7 +181,8 @@ function chartsCtrl (apiFactory){
             .attr("transform", "translate(235, 0)");
         var xScale = d3.scale.ordinal().rangeBands([0, innerWidth], barPadding);
         var yScale = d3.scale.linear().range([innerHeight, 0]);
-        var colorScale = d3.scale.category10();
+        var colorScale = d3.scale.ordinal();
+            colorScale.range(["#ffa766", "#ff6d00"]);
         // Use a modified SI formatter that uses "B" for Billion.
         var siFormat = d3.format("s");
         var customTickFormat = function (d){
