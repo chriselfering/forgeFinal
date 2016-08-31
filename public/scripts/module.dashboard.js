@@ -99,6 +99,7 @@ function chartsCtrl (apiFactory){
                 cCtrl.goalList = response.data;
 
                 cCtrl.goalList.forEach(function(goal){
+                    var goalFinal = goal.goalAmount - goal.startAmount
                     if(goal.type === "strength"){
                         cCtrl.strengthData.push(
                         {
@@ -110,7 +111,7 @@ function chartsCtrl (apiFactory){
                         {
                             name        : goal.name,
                             amountType  : 'goal',
-                            value       : goal.goalAmount,
+                            value       : goalFinal,
                             type        : goal.type
                         }
                         )
