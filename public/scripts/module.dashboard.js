@@ -126,7 +126,7 @@ function chartsCtrl (apiFactory){
                             {
                                 name        : goal.name,
                                 amountType  : 'goal',
-                                value       : goal.goalAmount,
+                                value       : goalFinal,
                                 type        : goal.type
                             }
                             )
@@ -141,7 +141,7 @@ function chartsCtrl (apiFactory){
                                 {
                                     name        : goal.name,
                                     amountType  : 'goal',
-                                    value       : goal.goalAmount,
+                                    value       : goalFinal,
                                     type        : goal.type
                                 }
                                 )
