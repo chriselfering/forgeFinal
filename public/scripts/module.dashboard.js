@@ -271,9 +271,6 @@ function chartsCtrl (apiFactory){
             .attr("transform", "translate(0," + innerHeight + ")");
         var yAxisG = g.append("g")
             .attr("class", "y axis");
-        var colorLegendG = g.append("g")
-            .attr("class", "color-legend")
-            .attr("transform", "translate(500, 0)");
         var xScale = d3.scale.ordinal().rangeBands([0, innerWidth], barPadding);
         var yScale = d3.scale.linear().range([innerHeight, 0]);
         var colorScale = d3.scale.ordinal();
@@ -289,12 +286,7 @@ function chartsCtrl (apiFactory){
             .ticks(5)
             .tickFormat(customTickFormat)
             .outerTickSize(0);
-        var colorLegend = d3.legend.color()
-            .scale(colorScale)
-            .shapePadding(3)
-            .shapeWidth(15)
-            .shapeHeight(15)
-            .labelOffset(4);
+
         function render(data){
         var nested = d3.nest()
               .key(function (d){ return d[layerColumn]; })
@@ -335,7 +327,7 @@ function chartsCtrl (apiFactory){
               .attr("y", function (d){ return yScale(d.y0 + d.y); })
               .attr("width", xScale.rangeBand())
               .attr("height", function (d){ return innerHeight - yScale(d.y); })
-        colorLegendG.call(colorLegend);
+
         }
         function type(d){
         d.population = +d.population;
@@ -370,13 +362,10 @@ function chartsCtrl (apiFactory){
                 .attr("transform", "translate(0," + innerHeight + ")");
             var yAxisG = g.append("g")
                 .attr("class", "y axis");
-            var colorLegendG = g.append("g")
-                .attr("class", "color-legend")
-                .attr("transform", "translate(500, 0)");
             var xScale = d3.scale.ordinal().rangeBands([0, innerWidth], barPadding);
             var yScale = d3.scale.linear().range([innerHeight, 0]);
             var colorScale = d3.scale.ordinal();
-                colorScale.range(["white", "#6eb620"]);
+                colorScale.range(["white", "#609f1c"]);
             // Use a modified SI formatter that uses "B" for Billion.
             var siFormat = d3.format("s");
             var customTickFormat = function (d){
@@ -388,12 +377,7 @@ function chartsCtrl (apiFactory){
                 .ticks(5)
                 .tickFormat(customTickFormat)
                 .outerTickSize(0);
-            var colorLegend = d3.legend.color()
-                .scale(colorScale)
-                .shapePadding(10)
-                .shapeWidth(15)
-                .shapeHeight(15)
-                .labelOffset(4);
+
             function render(data){
             var nested = d3.nest()
                   .key(function (d){ return d[layerColumn]; })
@@ -434,7 +418,7 @@ function chartsCtrl (apiFactory){
                   .attr("y", function (d){ return yScale(d.y0 + d.y); })
                   .attr("width", xScale.rangeBand())
                   .attr("height", function (d){ return innerHeight - yScale(d.y); })
-            colorLegendG.call(colorLegend);
+
             }
             function type(d){
             d.population = +d.population;

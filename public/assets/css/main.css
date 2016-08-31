@@ -803,6 +803,7 @@ a:after {
 .physChartText {
   color: white;
   margin: 20px;
+  position: relative;
 }
 
 .finChartText {
@@ -908,11 +909,13 @@ Chart Styling
     background-color: #8ae429; green;
     width: 100%;
     min-height: 500px;
+    position: relative;
 }
 .physChart {
     background-color: #ff6d00; orange;
     width: 100%;
     min-height: 500px;
+    position: relative;
 }
 .chartTitle {
     color: white;
@@ -929,19 +932,37 @@ Chart Styling
     height: 500px;
 }
 .legendWhite {
-    fill: white;
+    background-color: white;
     height: 30px;
     width: 30px;
+    display: inline-block;
 }
 .legendOrange {
-    fill: #ffa766;
+    background-color: #ffa766;
     height: 30px;
     width: 30px;
+    display: inline-block;
+}
+.legendGreen {
+    background-color: #609f1c; darker green;
+    height: 30px;
+    width: 30px;
+    display: inline-block;
 }
 .legendBox {
-    display: flex;
-    justify-content: space-around;
+    height: 75px;
+    width: 100px;
+    position: absolute;
+    bottom: 50%;
+    left: 75%;
 }
 .legendText {
     color: white;
+    font-weight: bold;
+    vertical-align: top;
+    line-height: 30px;
+    /*display: inline-block;*/
+}
+.show {
+    border: 3px red solid;
 }

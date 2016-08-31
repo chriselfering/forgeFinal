@@ -1,21 +1,49 @@
-    <br>
-    <br>
+<br>
+<br>
 
-    <div ng-show="cCtrl.strengthData.length > 0" class="physChart">
-        <h1 class="chartTitle"> Strength Goals (lbs) </h1>
-        <div id="strChart"></div>
-        <div class="legendBox">
-            <div class="legendWhite"></div> <p class="legendText">Start</p>
-            <div class="legendOrange"></div> <p class="legendText">Goal</p>
-        </div>
+<div ng-show="cCtrl.strengthData.length > 0" class="physChart">
+    <h1 class="chartTitle"> Strength Goals (lbs) </h1>
+    <div id="strChart"></div>
+    <div class="legendBox">
+        <span>
+            <span class="legendWhite"></span>
+            <span class="legendText">Start</span>
+        </span>
+        <span>
+            <span class="legendOrange"></span>
+            <span class="legendText">Goal</span>
+        </span>
     </div>
-    <div ng-show="cCtrl.speedData.length > 0" class="physChart">
-        <h1 class="chartTitle"> Speed Goals (min) </h1>
-        <div id="spdChart"></div>
+</div>
+
+<div ng-show="cCtrl.speedData.length > 0" class="physChart">
+    <h1 class="chartTitle"> Speed Goals (min) </h1>
+    <div id="spdChart"></div>
+    <div class="legendBox">
+        <span>
+            <span class="legendWhite"></span>
+            <span class="legendText">Start</span>
+        </span>
+        <span>
+            <span class="legendOrange"></span>
+            <span class="legendText">Goal</span>
+        </span>
     </div>
-    <div ng-show="cCtrl.financialData.length > 0" class="finChart">
-        <h1 class="chartTitle"> Financial Goals ($) </h1>
-        <div id="finChart"></div>
+</div>
+
+<div ng-show="cCtrl.financialData.length > 0" class="finChart">
+    <h1 class="chartTitle"> Financial Goals ($) </h1>
+    <div id="finChart"></div>
+    <div class="legendBox">
+        <span>
+            <span class="legendWhite"></span>
+            <span class="legendText">Start</span>
+        </span>
+        <span>
+            <span class="legendGreen"></span>
+            <span class="legendText">Goal</span>
+        </span>
     </div>
-    <br>
-    <br>
+</div>
+<br>
+<br>
