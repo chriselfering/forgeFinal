@@ -162,7 +162,7 @@ function chartsCtrl (apiFactory){
 
     var makeStrengthChart = function(data){
 
-        var outerWidth = 700;
+        var outerWidth = 800;
         var outerHeight = 350;
         var margin = { left: 90, top: 60, right: 90, bottom: 40 };
         var barPadding = 0.2;
@@ -255,7 +255,7 @@ function chartsCtrl (apiFactory){
 
     var makeSpeedChart = function(data){
 
-        var outerWidth = 700;
+        var outerWidth = 800;
         var outerHeight = 350;
         var margin = { left: 90, top: 60, right: 90, bottom: 40 };
         var barPadding = 0.2;
@@ -346,7 +346,7 @@ function chartsCtrl (apiFactory){
 
         var makeFinancialChart = function(data){
 
-            var outerWidth = 700;
+            var outerWidth = 800;
             var outerHeight = 350;
             var margin = { left: 90, top: 60, right: 90, bottom: 40 };
             var barPadding = 0.2;
